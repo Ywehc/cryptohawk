@@ -1,12 +1,10 @@
 <template>
   <div class="home">
-    <MobileGrid msg="Welcome to Your Vue.js App"/>
+    <MobileGrid />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import Grid from '@/components/MainGrid.vue';
 import MobileGrid from '@/components/MobileGrid.vue';
 
 export default {

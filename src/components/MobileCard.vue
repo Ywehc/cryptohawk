@@ -6,7 +6,13 @@
             <thead>
                 <tr>
                 <th scope="col">{{ $t('message.grid.coins') }}</th>
-                <th scope="col">Bitcoin, Etherium</th>
+                <th scope="col">
+                    <span>
+                        <img src="/../assets/bitcoin.svg" alt="bitcoin" class="icon">
+                    </span>Bitcoin,
+                     <span>
+                        <img src="/../assets/ethereum.png" alt="bitcoin" class="icon">
+                    </span>Etherium</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +48,10 @@ export default {
     border: 5px solid $light;
     border-radius: 5%;
     margin-bottom: 20px;
+    padding: 10px;
 }
-
+.icon{
+    width: 18px;
+    margin: 5px;
+}
 </style>

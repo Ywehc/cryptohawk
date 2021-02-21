@@ -36,7 +36,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .mobile-grid {
-  background: $medium;
+  background: $dark;
+  padding: 10px;
   padding-top: 20px;
 }
 
