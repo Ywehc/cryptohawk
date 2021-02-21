@@ -1,5 +1,5 @@
 <template>
-    <div class="mobile-grid">
+    <div class="desktop-grid container">
         <platform-card
           title="Newton"
           :description="$t('message.grid.description.newton')"
@@ -29,15 +29,22 @@ import PlatformCard from './PlatformCard.vue';
 
 export default {
   components: { PlatformCard },
-  name: 'MobileGrid',
 };
 </script>
 
 <style scoped lang="scss">
-.mobile-grid {
-  background: $dark;
-  padding: 10px;
-  padding-top: 20px;
+.desktop-grid {
+  display: flex;
 }
-
+@media only screen and (min-width: 576px) {
+  .desktop-grid {
+    flex-direction: column;
+    padding-top: 40px;
+  }
+}
+@media only screen and (min-width: 996px) {
+  .desktop-grid {
+    flex-direction: row;
+  }
+}
 </style>

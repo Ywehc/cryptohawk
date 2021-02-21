@@ -1,6 +1,7 @@
 <template>
     <div class="container">
-        <h2>{{ title }}</h2>
+        <div class="information">
+            <h2 class="title">{{ title }}</h2>
         <p>{{ description }}</p>
         <table class="table table-bordered">
             <thead>
@@ -30,12 +31,16 @@
                 </tr>
             </tbody>
         </table>
+        </div>
+        <p class="cta">Go to
+            <button type="button" class="btn btn-primary btn-sm">{{ title }}</button>
+        </p>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'MobileCard',
+  name: 'PlatformCard',
   props: ['title', 'description', 'spread', 'fees', 'referral'],
 };
 </script>
@@ -53,5 +58,34 @@ export default {
 .icon{
     width: 18px;
     margin: 5px;
+}
+.title {
+    font-size: 22px;
+}
+.cta {
+    text-align:center;
+    font-weight: bold;
+    button {
+        background: $attention;
+        color: $darkest;
+        border-color: $darkest;
+        font-weight: bold;
+    }
+}
+@media only screen and (min-width: 576px) {
+  .container {
+      border-radius: 1%;
+  }
+}
+@media only screen and (min-width: 996px) {
+  .container {
+      max-width: 29%;
+  }
+  .information {
+      height: 88%;
+  }
+  .cta {
+      height: 12%;
+  }
 }
 </style>

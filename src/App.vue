@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Nav />
-    <router-view/>
-    <Footer />
+    <Nav class="nav" />
+    <router-view class="main"/>
+    <Footer class="footer"/>
   </div>
 </template>
 
@@ -22,5 +22,15 @@ export default {
 #app {
   background: $darkest;
 }
-
+@media only screen and (min-width: 996px) {
+  .nav {
+    height: 5vh;
+  }
+  .main {
+    height: 90vh;
+  }
+  .footer {
+    height: 5vh;
+  }
+}
 </style>
