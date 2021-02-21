@@ -1,34 +1,27 @@
 <template>
     <div class="container">
-        <h2>{{ $t("message.grid.newton.name")}}</h2>
-        <p>{{ $t("message.grid.newton.description")}}</p>
+        <h2>{{ title }}</h2>
+        <p>{{ description }}</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
-                <th scope="col">Coins</th>
-                <th scope="col">Spreads</th>
-                <th scope="col">Fees</th>
-                <th scope="col">Referrals</th>
+                <th scope="col">{{ $t('message.grid.coins') }}</th>
+                <th scope="col">Bitcoin, Etherium</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                </tr>
-                <!-- <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <th scope="row">{{ $t('message.grid.spread') }}</th>
+                <td>{{ spread }}</td>
                 </tr>
                 <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                </tr> -->
+                <th scope="row">{{ $t('message.grid.fees') }}</th>
+                <td>{{ fees }}</td>
+                </tr>
+                <tr>
+                <th scope="row">{{ $t('message.grid.referrals') }}</th>
+                <td colspan="2">{{ referral }}</td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -37,13 +30,10 @@
 <script>
 export default {
   name: 'MobileCard',
-  props: {
-    msg: String,
-  },
+  props: ['title', 'description', 'spread', 'fees', 'referral'],
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .container {
     background: $lightest;
@@ -51,6 +41,7 @@ export default {
     width: 94%;
     border: 5px solid $light;
     border-radius: 5%;
+    margin-bottom: 20px;
 }
 
 </style>

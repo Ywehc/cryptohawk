@@ -7,16 +7,30 @@ const messages = {
   en: {
     message: {
       grid: {
-        newton: {
-          name: 'Newton',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.',
+        description: {
+          newton: 'Newton is a Canadian-owned exchange, allows trading of several different cryptocurrencies and currently have the best spreads for purchasing Bitcoin.',
+          shakepay: 'Shakepay is a Canadian-owned exchange that allows trading of Bitcoin and Ethereum. While their spreads are a bit higher than some, they have a strong referral program and pay you 15 cents in bitcoin per day for a quick shake of your phone',
+          wealthsimple: 'Wealthsimple is an established Canadian investment platform owned primarily by Power Corporation and currently holds over $5 billion CAD in assets. While they have an intuitive interface, they charge both a spread and an operator fee, and you also do not directly own your coins.',
         },
+        coins: 'coins',
+        spread: 'spread',
+        fees: 'fees',
+        referrals: 'referrals',
       },
     },
   },
   fr: {
     message: {
-      hello: 'こんにちは、世界',
+      grid: {
+        description: {
+          newton: 'Newton is a Canadian-owned exchange, allows trading of several different cryptocurrencies and currently have the best spreads for purchasing Bitcoin.',
+          shakepay: 'Shakepay blah blah',
+        },
+        coins: 'las pièces',
+        spread: 'pourcentage',
+        fees: 'frais',
+        referrals: 'références',
+      },
     },
   },
 };
