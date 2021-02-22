@@ -27,7 +27,7 @@ export default {
 <style lang="scss" scoped>
 @media only screen and (min-width: 576px) {
   .home {
-    background: $dark;;
+    background: $dark;
   }
 }
 </style>

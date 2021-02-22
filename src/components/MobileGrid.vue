@@ -1,39 +1,26 @@
 <template>
     <div class="mobile-grid">
-        <platform-card
-          title="Newton"
-          :description="$t('message.grid.description.newton')"
-          spread="2%"
-          fees="none"
-          referral="$20cad">
-        </platform-card>
-        <platform-card
-          title="Shakepay"
-          :description="$t('message.grid.description.shakepay')"
-          spread="4%"
-          fees="none"
-          referral="$30cad each">
-        </platform-card>
-        <platform-card
-          title="Wealthsimple"
-          :description="$t('message.grid.description.wealthsimple')"
-          spread="2%"
-          fees="none"
-          referral="$20cad">
-        </platform-card>
+      <p class="description">{{ $t('message.brand.description') }}</p>
+      <platform-cards />
     </div>
 </template>
 
 <script>
-import PlatformCard from './PlatformCard.vue';
+import PlatformCards from './PlatformCards.vue';
 
 export default {
-  components: { PlatformCard },
+  components: { PlatformCards },
   name: 'MobileGrid',
 };
 </script>
 
 <style scoped lang="scss">
+.description {
+  color: $lightest;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+}
 .mobile-grid {
   background: $dark;
   padding: 10px;

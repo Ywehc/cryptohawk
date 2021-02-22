@@ -24,13 +24,13 @@ export default {
 }
 @media only screen and (min-width: 996px) {
   .nav {
-    height: 5vh;
+    min-height: 5vh;
   }
   .main {
-    height: 90vh;
+    min-height: 88vh;
   }
   .footer {
-    height: 5vh;
+    min-height: 5vh;
   }
 }
 </style>
