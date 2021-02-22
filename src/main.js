@@ -12,3 +12,9 @@ new Vue({
   store,
   render: (h) => h(App),
 }).$mount('#app');
+
+if (navigator.language === 'fr-CA') {
+  i18n.locale = 'fr';
+} else {
+  i18n.locale = 'en';
+}

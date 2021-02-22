@@ -1,42 +1,29 @@
 <template>
     <div class="mobile-grid">
-        <mobile-card
-          title="Newton"
-          :description="$t('message.grid.description.newton')"
-          spread="2%"
-          fees="none"
-          referral="$20cad">
-        </mobile-card>
-        <mobile-card
-          title="Shakepay"
-          :description="$t('message.grid.description.shakepay')"
-          spread="4%"
-          fees="none"
-          referral="$30cad each">
-        </mobile-card>
-        <mobile-card
-          title="Wealthsimple"
-          :description="$t('message.grid.description.wealthsimple')"
-          spread="2%"
-          fees="none"
-          referral="$20cad">
-        </mobile-card>
+      <p class="description">{{ $t('message.brand.description') }}</p>
+      <platform-cards />
     </div>
 </template>
 
 <script>
-import MobileCard from './MobileCard.vue';
+import PlatformCards from './PlatformCards.vue';
 
 export default {
-  components: { MobileCard },
+  components: { PlatformCards },
   name: 'MobileGrid',
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.description {
+  color: $lightest;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+}
 .mobile-grid {
-  background: $medium;
+  background: $dark;
+  padding: 10px;
   padding-top: 20px;
 }
 
