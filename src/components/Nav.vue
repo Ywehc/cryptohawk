@@ -1,7 +1,7 @@
 <template>
     <div id="nav">
         <img src="/../assets/hawk.svg" class="logo">
-        <h2 class="brand-text">cryptohawk</h2>
+        <router-link to="/" class="brand-text">{{ $t('message.brand.name') }}</router-link>
     </div>
 </template>
 
@@ -24,6 +24,11 @@
   font-weight: 200;
   letter-spacing: 1.2px;
   font-size: 22px;
+  text-decoration: none;
+  color: $lightest;
+}
+.brand-text :hover {
+  color: $light;
 }
 @media only screen and (min-width: 576px) {
   #nav {

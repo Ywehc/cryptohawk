@@ -9,6 +9,7 @@ const messages = {
   en: {
     message: {
       brand: {
+        name: 'cryptohawk',
         description: 'Cryptocurrency Platform and Exchange information for Canadian investors and traders.',
       },
       nav: {
@@ -48,6 +49,7 @@ const messages = {
   fr: {
     message: {
       brand: {
+        name: 'cryptohawk',
         description: "Informations sur la plateforme et l'échange de crypto-monnaie pour les investisseurs et les commerçants canadiens.",
       },
       nav: {
