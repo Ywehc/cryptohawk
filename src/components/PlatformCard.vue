@@ -29,13 +29,17 @@
                         <td class="value">{{ fees }}</td>
                     </tr>
                     <tr>
+                        <th scope="row" class="key">{{ $t('message.grid.coin_ownership') }}</th>
+                        <td class="value">{{ coin_ownership }}</td>
+                    </tr>
+                    <tr>
                         <th scope="row" class="key">{{ $t('message.grid.referrals') }}</th>
                         <td colspan="2" class="value">{{ referral }}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <p class="cta">Go to
+        <p class="cta">{{ $t('message.grid.go_to') }}
             <a class="btn btn-primary btn-sm" :href="dynamicUrl" role="button" target="_blank">
                 {{ title }}
             </a>
@@ -49,7 +53,7 @@ import ShakepayCoins from './shakepay/ShakepayCoins.vue';
 
 export default {
   name: 'PlatformCard',
-  props: ['title', 'description', 'spread', 'fees', 'referral', 'spread_buying', 'spread_selling', 'coins', 'image_coins'],
+  props: ['title', 'description', 'spread', 'fees', 'referral', 'spread_buying', 'spread_selling', 'coins', 'image_coins', 'coin_ownership'],
   computed: {
     coinSet() {
       switch (this.title) {
