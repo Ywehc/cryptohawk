@@ -1,7 +1,5 @@
 <template>
     <div id="nav">
-      <!-- <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> -->
         <img src="/../assets/hawk.svg" class="logo">
         <h2 class="brand-text">cryptohawk</h2>
     </div>
@@ -9,7 +7,7 @@
 
 <style lang="scss">
 #nav {
-  padding: 4px;
+  padding: 20px 0px;
   margin: auto;
   text-align: center;
   color: $lightest;
@@ -18,7 +16,6 @@
 }
 .logo {
   width: 40px;
-  margin-top: 10px;
   margin: auto;
   filter: invert(92%) sepia(18%) saturate(145%) hue-rotate(196deg) brightness(99%) contrast(93%);
 }
@@ -35,7 +32,6 @@
     flex-direction: row;
   }
   .logo {
-    margin-top: 0;
     margin-left: 0;
     width: 30px;
   }

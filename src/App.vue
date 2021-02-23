@@ -27,7 +27,7 @@ export default {
     min-height: 5vh;
   }
   .main {
-    min-height: 88vh;
+    min-height: 86vh;
   }
   .footer {
     min-height: 5vh;

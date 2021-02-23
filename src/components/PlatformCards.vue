@@ -6,8 +6,9 @@
         spread_buying="0.57%"
         spread_selling="0.64%"
         fees="None"
-        referral="$25"
-        coins="Bitcoin, Ethereum, Ripple, Stellar">
+        :referral="newtonReferral"
+        :coins="$t('message.grid.newton.coins')"
+        :coin_ownership="$t('message.grid.yes')">
       </platform-card>
       <platform-card
         title="Shakepay"
@@ -15,17 +16,19 @@
         spread_buying="1.41%"
         spread_selling="1.3%"
         fees="None"
-        referral="$30 to each party"
-        coins="Bitcoin, Ethereum">
+        :referral="shakepayReferral"
+        :coins="$t('message.grid.shakepay.coins')"
+        :coin_ownership="$t('message.grid.yes')">
       </platform-card>
       <platform-card
         title="Wealthsimple"
         :description="$t('message.grid.wealthsimple.description')"
         spread_buying="2%"
         spread_selling="2%"
-        fees="3% 'Operations Fee'"
-        referral="$5 to each party"
-        coins="Not Applicable">
+        :fees="wealthsimpleFees"
+        :referral="wealthsimpleReferral"
+        :coins="$t('message.grid.wealthsimple.coins')"
+        :coin_ownership="$t('message.grid.no')">
       </platform-card>
     </div>
 </template>
@@ -35,6 +38,20 @@ import PlatformCard from './PlatformCard.vue';
 
 export default {
   components: { PlatformCard },
+  computed: {
+    newtonReferral() {
+      return (`$25 ${this.$t('message.grid.to_each_party')}`);
+    },
+    shakepayReferral() {
+      return (`$30 ${this.$t('message.grid.to_each_party')}`);
+    },
+    wealthsimpleReferral() {
+      return (`$5 ${this.$t('message.grid.to_each_party')}`);
+    },
+    wealthsimpleFees() {
+      return (`3% ${this.$t('message.grid.operations_fee')}`);
+    },
+  },
 };
 </script>
 

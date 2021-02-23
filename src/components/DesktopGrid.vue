@@ -1,5 +1,6 @@
 <template>
     <div class="desktop-grid container">
+      <h2>{{ $t('message.brand.description') }}</h2>
       <platform-cards />
     </div>
 </template>
@@ -13,5 +14,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.desktop-grid {
+  padding-top: 40px;
+}
+h2 {
+  color: $lightest;
+  font-size: 22px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
 </style>
