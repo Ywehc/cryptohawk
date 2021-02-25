@@ -29,10 +29,6 @@
                         <td class="value">{{ fees }}</td>
                     </tr>
                     <tr>
-                        <th scope="row" class="key">{{ $t('message.grid.coin_ownership') }}</th>
-                        <td class="value">{{ coin_ownership }}</td>
-                    </tr>
-                    <tr>
                         <th scope="row" class="key">{{ $t('message.grid.referrals') }}</th>
                         <td colspan="2" class="value">{{ referral }}</td>
                     </tr>
@@ -72,6 +68,12 @@ export default {
           return 'https://shakepay.me/r/CIORKOZ';
         case 'Wealthsimple':
           return 'https://my.wealthsimple.com/app/public/trade-referral-signup?code=_E1PGG';
+        case 'Coinsmart':
+          return 'https://crypto.coinsmart.com/register?promo=Ref-r5JA0V';
+        case 'Netcoins':
+          return 'https://netcoins.app/r?ac=0J90K3';
+        case 'NDAX':
+          return 'https://one.ndax.io/bfQjUd';
         default: return null;
       }
     },
@@ -128,6 +130,7 @@ export default {
 @media only screen and (min-width: 996px) {
   .container {
       max-width: 29%;
+      margin-top: 20px;
   }
   .information {
       height: 88%;

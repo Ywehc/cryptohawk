@@ -1,14 +1,13 @@
 <template>
     <div class="card-grid">
-        <platform-card
+      <platform-card
         title="Newton"
         :description="$t('message.grid.newton.description')"
         spread_buying="0.57%"
         spread_selling="0.64%"
         fees="None"
         :referral="newtonReferral"
-        :coins="$t('message.grid.newton.coins')"
-        :coin_ownership="$t('message.grid.yes')">
+        :coins="$t('message.grid.newton.coins')">
       </platform-card>
       <platform-card
         title="Shakepay"
@@ -17,8 +16,7 @@
         spread_selling="1.3%"
         fees="None"
         :referral="shakepayReferral"
-        :coins="$t('message.grid.shakepay.coins')"
-        :coin_ownership="$t('message.grid.yes')">
+        :coins="$t('message.grid.shakepay.coins')">
       </platform-card>
       <platform-card
         title="Wealthsimple"
@@ -27,8 +25,34 @@
         spread_selling="2%"
         :fees="wealthsimpleFees"
         :referral="wealthsimpleReferral"
-        :coins="$t('message.grid.wealthsimple.coins')"
-        :coin_ownership="$t('message.grid.no')">
+        :coins="$t('message.grid.wealthsimple.coins')">
+      </platform-card>
+      <platform-card
+        title="Coinsmart"
+        :description="$t('message.grid.coinsmart.description')"
+        spread_buying="1.39%"
+        spread_selling="2.4%"
+        fees="0.2% / 2%"
+        :referral="coinsmartReferral"
+        :coins="$t('message.grid.coinsmart.coins')">
+      </platform-card>
+      <platform-card
+        title="Netcoins"
+        :description="$t('message.grid.netcoins.description')"
+        spread_buying="0.89%"
+        spread_selling="0.67%"
+        fees="0.005%"
+        :referral="netcoinsReferral"
+        :coins="$t('message.grid.netcoins.coins')">
+      </platform-card>
+      <platform-card
+        title="NDAX"
+        :description="$t('message.grid.ndax.description')"
+        spread_buying="2%"
+        spread_selling="2%"
+        fees="None"
+        :referral="ndaxReferral"
+        :coins="$t('message.grid.ndax.coins')">
       </platform-card>
     </div>
 </template>
@@ -48,6 +72,15 @@ export default {
     wealthsimpleReferral() {
       return (`$5 ${this.$t('message.grid.to_each_party')}`);
     },
+    coinsmartReferral() {
+      return (`$15 ${this.$t('message.grid.to_each_party')}`);
+    },
+    netcoinsReferral() {
+      return (`$50 + $10 ${this.$t('message.grid.to_new_user')}`);
+    },
+    ndaxReferral() {
+      return (`$10 ${this.$t('message.grid.to_each_party')} + 10%`);
+    },
     wealthsimpleFees() {
       return (`3% ${this.$t('message.grid.operations_fee')}`);
     },
@@ -66,6 +99,7 @@ export default {
 @media only screen and (min-width: 996px) {
   .card-grid {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 </style>
