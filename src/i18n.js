@@ -19,7 +19,7 @@ const messages = {
       grid: {
         newton: {
           description: `Newton bills itself as 'Canada's first no-fee cryptocurrency brokerage'. Their interface is intuitive and feels secure but is still waiting for some features like limit buys. Overall we consider Newton to currently be the best platform to buy and sell cryptocurrency due to their competitive rates and lack of fees.`,
-          coins: 'Bitcoin, Ethereum, Ripple, Stellar, Bitcoin Cash',
+          coins: 'Bitcoin, Ethereum, Ripple, Stellar, Bitcoin Cash, Litecoin, Monero, USD Coin, Tether, QCAD',
         },
         shakepay: {
           description: `Shakepay is a Canadian-owned exchange that allows trading of Bitcoin and Ethereum. They charge no fees and have rates that are in the middle of the pack. Their 'shake' concept may come across as gimicky but it is free Bitcoin and their referral program is among the best in the business.`,
@@ -30,7 +30,7 @@ const messages = {
           coins: 'Not Applicable',
         },
         coinsmart: {
-          description: 'Coinsmart is a Canadian exhange with an interface geared towards more experienced crypto traders. They offer credit card purchases and a wide variety of coins, tools and features.',
+          description: 'Coinsmart is a Canadian exchange with an interface geared towards more experienced crypto traders. They offer credit card purchases and a wide variety of coins, tools and features.',
           coins: 'Bitcoin, Ethereum, Litecoin, Ripple, Bitcoin Cash, EOS, Stellar, NEO, Cardano, QCAD',
         },
         netcoins: {
@@ -42,7 +42,7 @@ const messages = {
           coins: 'Bitcoin CAD, Bitcoin USD, Ethereum, Cardano, Litecoin, Ripple, Dot, Tether, Stellar, Link, EOS',
         },
         coins: 'Available Coins',
-        spread_buying: 'Cost to Buy',
+        spread_buying: 'Cost to Buy / Sell',
         spread_selling: 'Cost to Sell',
         fees: 'Additional Fees',
         referrals: 'Referrals',
@@ -56,6 +56,9 @@ const messages = {
       },
       contact: {
         header: 'How can we help you today?',
+        email: 'Your email:',
+        message: 'Your message',
+        send: 'Send',
       },
     },
   },
@@ -72,7 +75,7 @@ const messages = {
       grid: {
         newton: {
           description: `Newton se présente comme «le premier courtage de crypto-monnaie sans frais au Canada». Leur interface est intuitive et sécurisée, mais attend toujours certaines fonctionnalités telles que les achats limités. Dans l'ensemble, nous considérons Newton comme actuellement la meilleure plateforme pour acheter et vendre des crypto-monnaies en raison de leurs tarifs compétitifs et de l'absence de frais.`,
-          coins: 'Bitcoin, Ethereum, Ripple, Stellar, Bitcoin Cash',
+          coins: 'Bitcoin, Ethereum, Ripple, Stellar, Bitcoin Cash, Litecoin, Monero, USD Coin, Tether, QCAD',
         },
         shakepay: {
           description: `Shakepay est une bourse de propriété canadienne qui permet la négociation de Bitcoin et d'Ethereum. Ils ne facturent aucun frais et ont des tarifs au milieu du peloton. Leur concept de  'shake' peut sembler gimicky, mais il s'agit de Bitcoin gratuit et leur programme de parrainage est parmi les meilleurs du secteur.`,
@@ -83,15 +86,15 @@ const messages = {
           coins: `N'est pas applicable`,
         },
         coinsmart: {
-          description: `Wealthsimple est une plateforme d'investissement canadienne établie détenue principalement par Power Corporation et détient actuellement des actifs de plus de 5 milliards de dollars canadiens.Bien qu'ils aient une interface intuitive, ils facturent à la fois des frais de propagation et des frais d'opérateur, et vous ne possédez pas non plus directement vos pièces.`,
+          description: `Coinsmart est une bourse canadienne avec une interface destinée aux traders crypto plus expérimentés. Ils proposent des achats par carte de crédit et une grande variété de pièces, d'outils et de fonctionnalités.`,
           coins: 'Bitcoin, Ethereum, Litecoin, Ripple, Bitcoin Cash, EOS, Stellar, NEO, Cardano, QCAD',
         },
         netcoins: {
-          description: `Wealthsimple est une plateforme d'investissement canadienne établie détenue principalement par Power Corporation et détient actuellement des actifs de plus de 5 milliards de dollars canadiens.Bien qu'ils aient une interface intuitive, ils facturent à la fois des frais de propagation et des frais d'opérateur, et vous ne possédez pas non plus directement vos pièces.`,
+          description: 'Netcoins est une bourse canadienne bien commercialisée destinée aux nouveaux traders.Ils offrent quatre pièces différentes à échanger et fournissent une interface simple et facile à comprendre.',
           coins: 'Bitcoin, Ethereum, Litecoin, Ripple, Bitcoin Cash',
         },
         ndax: {
-          description: 'NDAX is a full-featured Canadian exchange with a deep set of trading tools and a transparent fee structure. They are registered under FINTRAC and would be my recommendation for a serious trader.',
+          description: `NDAX est une bourse canadienne complète avec un ensemble complet d'outils de négociation et une structure de frais transparente. Ils sont enregistrés sous CANAFE et seraient notre recommandation pour un commerçant sérieux.`,
           coins: 'Bitcoin CAD, Bitcoin USD, Ethereum, Cardano, Litecoin, Ripple, Dot, Tether, Stellar, Link, EOS',
         },
         coins: 'Pièces disponibles',
@@ -106,6 +109,12 @@ const messages = {
         operations_fee: 'Frais de fonctionnement',
         go_to: `Aller à`,
         to_new_user: 'au nouvel utilisateur',
+      },
+      contact: {
+        header: `Que peut-on faire pour vous aider aujourd'hui?`,
+        email: 'Votre email',
+        message: 'Votre message',
+        send: 'Envoyer',
       },
     },
   },

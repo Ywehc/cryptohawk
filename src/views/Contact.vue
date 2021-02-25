@@ -6,17 +6,17 @@
       method="POST"
     >
       <label>
-        Your email:
+        {{ $t('message.contact.email') }}
         <input type="text" name="_replyto">
       </label>
       <label>
-        Your message:
+        {{ $t('message.contact.message') }}
         <textarea name="message" rows="15" cols="20"></textarea>
       </label>
 
       <!-- your other form fields go here -->
 
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn btn-primary">{{ $t('message.contact.send') }}</button>
     </form>
   </div>
 </template>

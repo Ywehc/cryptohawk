@@ -5,7 +5,7 @@
         :description="$t('message.grid.newton.description')"
         spread_buying="0.57%"
         spread_selling="0.64%"
-        fees="None"
+        :fees="$t('message.grid.no')"
         :referral="newtonReferral"
         :coins="$t('message.grid.newton.coins')">
       </platform-card>
@@ -14,7 +14,7 @@
         :description="$t('message.grid.shakepay.description')"
         spread_buying="1.41%"
         spread_selling="1.3%"
-        fees="None"
+        :fees="$t('message.grid.no')"
         :referral="shakepayReferral"
         :coins="$t('message.grid.shakepay.coins')">
       </platform-card>
@@ -50,7 +50,7 @@
         :description="$t('message.grid.ndax.description')"
         spread_buying="2%"
         spread_selling="2%"
-        fees="None"
+        :fees="$t('message.grid.no')"
         :referral="ndaxReferral"
         :coins="$t('message.grid.ndax.coins')">
       </platform-card>

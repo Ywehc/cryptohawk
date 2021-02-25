@@ -18,11 +18,7 @@
                 <tbody>
                     <tr>
                         <th scope="row" class="key">{{ $t('message.grid.spread_buying') }}</th>
-                        <td class="value">{{ spread_buying }}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="key">{{ $t('message.grid.spread_selling') }}</th>
-                        <td class="value">{{ spread_selling }}</td>
+                        <td class="value">{{ spread_buying }} / {{ spread_selling }}</td>
                     </tr>
                     <tr>
                         <th scope="row" class="key">{{ $t('message.grid.fees') }}</th>
@@ -44,8 +40,11 @@
 </template>
 
 <script>
-import NewtonCoins from './newton/NewtonCoins.vue';
-import ShakepayCoins from './shakepay/ShakepayCoins.vue';
+import NewtonCoins from './coin_icons/NewtonCoins.vue';
+import ShakepayCoins from './coin_icons/ShakepayCoins.vue';
+import CoinsmartCoins from './coin_icons/CoinsmartCoins.vue';
+import NetcoinsCoins from './coin_icons/NetcoinsCoins.vue';
+import NdaxCoins from './coin_icons/NdaxCoins.vue';
 
 export default {
   name: 'PlatformCard',
@@ -57,6 +56,12 @@ export default {
           return NewtonCoins;
         case 'Shakepay':
           return ShakepayCoins;
+        case 'Coinsmart':
+          return CoinsmartCoins;
+        case 'Netcoins':
+          return NetcoinsCoins;
+        case 'NDAX':
+          return NdaxCoins;
         default: return null;
       }
     },
@@ -102,6 +107,12 @@ export default {
 .title-url {
     text-decoration: none;
     color: $medium;
+}
+.coin-set {
+  .icon {
+    width: 18px;
+    margin: 5px;
+  }
 }
 .key {
     width: 50%;

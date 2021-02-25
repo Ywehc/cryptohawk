@@ -5,9 +5,9 @@
     </div>
 </template>
 
-<style scoped>
-.icon{
-    width: 18px;
-    margin: 5px;
+<style lang="scss" scoped>
+.icon {
+    width: $coin_icon_width;
+    margin: $coin_icon_margin;
 }
 </style>
