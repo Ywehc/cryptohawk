@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import MobileGrid from '@/components/MobileGrid.vue';
+import MobileGrid from '@/components/mobile/MobileGrid.vue';
 import DesktopGrid from '@/components/DesktopGrid.vue';
 
 export default {

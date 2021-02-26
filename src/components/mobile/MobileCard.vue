@@ -1,20 +1,13 @@
 <template>
     <div class="container">
-        <div class="information">
+        <div class="hide-overflow" v-bind:class="{active: isActive}">
             <div class="header">
                 <a :href="dynamicUrl" class="title-url" target="_blank">
                     <h2 class="title">{{ title }}</h2>
                 </a>
                 <div :is="coinSet"></div>
             </div>
-            <p>{{ description }}</p>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col" class="key">{{ $t('message.grid.coins') }}</th>
-                        <th scope="col" class="value">{{ coins }}</th>
-                    </tr>
-                </thead>
+            <table class="table table-bordered data-grid">
                 <tbody>
                     <tr>
                         <th scope="row" class="key">{{ $t('message.grid.spread_buying') }}</th>
@@ -30,24 +23,47 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
-        <p class="cta">{{ $t('message.grid.go_to') }}
+            <p class="cta">{{ $t('message.grid.go_to') }}
             <a class="btn btn-primary btn-sm" :href="dynamicUrl" role="button" target="_blank">
                 {{ title }}
             </a>
-        </p>
+            </p>
+            <p class="des">{{ description }}</p>
+        </div>
+        <div class="btn-container">
+          <button v-if="isActive"
+            class="btn btn-primary btn-sm"
+            @click="textToggle"
+            >&#128317;
+          </button>
+          <button v-else
+            class="btn btn-primary btn-sm"
+            @click="textToggle"
+            >&#128316;
+          </button>
+        </div>
     </div>
 </template>
 
 <script>
-import NewtonCoins from './coin_icons/NewtonCoins.vue';
-import ShakepayCoins from './coin_icons/ShakepayCoins.vue';
-import CoinsmartCoins from './coin_icons/CoinsmartCoins.vue';
-import NetcoinsCoins from './coin_icons/NetcoinsCoins.vue';
-import NdaxCoins from './coin_icons/NdaxCoins.vue';
+import NewtonCoins from '../coin_icons/NewtonCoins.vue';
+import ShakepayCoins from '../coin_icons/ShakepayCoins.vue';
+import CoinsmartCoins from '../coin_icons/CoinsmartCoins.vue';
+import NetcoinsCoins from '../coin_icons/NetcoinsCoins.vue';
+import NdaxCoins from '../coin_icons/NdaxCoins.vue';
 
 export default {
-  name: 'PlatformCard',
+  data() {
+    return {
+      isActive: false,
+    };
+  },
+  methods: {
+    textToggle() {
+      this.isActive = !this.isActive;
+      console.log(this.isActive);
+    },
+  },
   props: ['title', 'description', 'spread', 'fees', 'referral', 'spread_buying', 'spread_selling', 'coins', 'image_coins', 'coin_ownership'],
   computed: {
     coinSet() {
@@ -91,10 +107,11 @@ export default {
     background: $lightest;
     color: $darkest;
     width: 94%;
-    border: 5px solid $light;
+    border: 3px solid $light;
     border-radius: 2%;
     margin-bottom: 20px;
     padding: 10px;
+    position: relative;
 }
 .header {
     display: flex;
@@ -102,18 +119,22 @@ export default {
     justify-content: space-between;
 }
 .title {
-    font-size: 22px;
+    font-size: 20px;
 }
 .title-url {
     text-decoration: none;
     color: $medium;
 }
-.key {
-    width: 50%;
+.active {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  height: 300px;
 }
-.value {
-    font-weight: normal;
-    text-align: center;;
+.data-grid {
+    font-size: 14px;
 }
 .cta {
     text-align:center;
@@ -127,21 +148,17 @@ export default {
         padding: 7px;
     }
 }
-@media only screen and (min-width: 576px) {
-  .container {
-      border-radius: 1%;
-  }
-}
-@media only screen and (min-width: 996px) {
-  .container {
-      max-width: 29%;
-      margin-top: 20px;
-  }
-  .information {
-      height: 88%;
-  }
-  .cta {
-      height: 12%;
+.btn-container {
+  button {
+    position: absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: -5px;
+    background: $darkest;
+    border: 2px solid $light;
+    color: $light;
   }
 }
 </style>

@@ -1,5 +1,14 @@
 <template>
     <div class="card-grid">
+      <mobile-card
+        title="Newton"
+        :description="$t('message.grid.newton.description')"
+        spread_buying="0.57%"
+        spread_selling="0.64%"
+        :fees="$t('message.grid.no')"
+        :referral="newtonReferral"
+        :coins="$t('message.grid.newton.coins')"
+      />
       <platform-card
         title="Newton"
         :description="$t('message.grid.newton.description')"
@@ -59,9 +68,10 @@
 
 <script>
 import PlatformCard from './PlatformCard.vue';
+import MobileCard from './mobile/MobileCard.vue';
 
 export default {
-  components: { PlatformCard },
+  components: { PlatformCard, MobileCard },
   computed: {
     newtonReferral() {
       return (`$25 ${this.$t('message.grid.to_each_party')}`);
