@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import PlatformCards from './PlatformCards.vue';
+import PlatformCards from '../PlatformCards.vue';
 
 export default {
   components: { PlatformCards },

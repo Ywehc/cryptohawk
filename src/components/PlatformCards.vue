@@ -1,6 +1,33 @@
 <template>
     <div class="card-grid">
       <platform-card
+        title="Coinsmart"
+        :description="$t('message.grid.coinsmart.description')"
+        spread_buying="1.39%"
+        spread_selling="2.4%"
+        fees="0.2% / 2%"
+        :referral="coinsmartReferral"
+        :coins="$t('message.grid.coinsmart.coins')">
+      </platform-card>
+      <platform-card
+        title="NDAX"
+        :description="$t('message.grid.ndax.description')"
+        spread_buying="2%"
+        spread_selling="2%"
+        :fees="$t('message.grid.no')"
+        :referral="ndaxReferral"
+        :coins="$t('message.grid.ndax.coins')">
+      </platform-card>
+      <platform-card
+        title="Netcoins"
+        :description="$t('message.grid.netcoins.description')"
+        spread_buying="0.89%"
+        spread_selling="0.67%"
+        fees="0.005%"
+        :referral="netcoinsReferral"
+        :coins="$t('message.grid.netcoins.coins')">
+      </platform-card>
+      <platform-card
         title="Newton"
         :description="$t('message.grid.newton.description')"
         spread_buying="0.57%"
@@ -26,33 +53,6 @@
         :fees="wealthsimpleFees"
         :referral="wealthsimpleReferral"
         :coins="$t('message.grid.wealthsimple.coins')">
-      </platform-card>
-      <platform-card
-        title="Coinsmart"
-        :description="$t('message.grid.coinsmart.description')"
-        spread_buying="1.39%"
-        spread_selling="2.4%"
-        fees="0.2% / 2%"
-        :referral="coinsmartReferral"
-        :coins="$t('message.grid.coinsmart.coins')">
-      </platform-card>
-      <platform-card
-        title="Netcoins"
-        :description="$t('message.grid.netcoins.description')"
-        spread_buying="0.89%"
-        spread_selling="0.67%"
-        fees="0.005%"
-        :referral="netcoinsReferral"
-        :coins="$t('message.grid.netcoins.coins')">
-      </platform-card>
-      <platform-card
-        title="NDAX"
-        :description="$t('message.grid.ndax.description')"
-        spread_buying="2%"
-        spread_selling="2%"
-        :fees="$t('message.grid.no')"
-        :referral="ndaxReferral"
-        :coins="$t('message.grid.ndax.coins')">
       </platform-card>
     </div>
 </template>
@@ -87,19 +87,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-@media only screen and (min-width: 576px) {
-  .card-grid {
-    display: flex;
-    flex-direction: column;
-    padding-top: 40px;
-  }
-}
-@media only screen and (min-width: 996px) {
-  .card-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-</style>

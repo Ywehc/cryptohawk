@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-      <MobileGrid v-if="windowWidth < 576" />
+      <MobileGrid v-if="windowWidth < 768" />
       <DesktopGrid v-else/>
   </div>
 </template>
 
 <script>
-import MobileGrid from '@/components/MobileGrid.vue';
+import MobileGrid from '@/components/mobile/MobileGrid.vue';
 import DesktopGrid from '@/components/DesktopGrid.vue';
 
 export default {
