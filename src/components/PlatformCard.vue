@@ -1,23 +1,17 @@
 <template>
     <div class="container">
-        <div class="information">
-            <div class="header">
+      <div v-if="windowWidth < 768" class="mobile">
+        <div v-bind:class="{active: isActive}">
+            <div class="header-mobile">
                 <a :href="dynamicUrl" class="title-url" target="_blank">
                     <h2 class="title">{{ title }}</h2>
                 </a>
-                <div :is="coinSet"></div>
+                <div :is="coinSet" class="coin-icons-mobile"></div>
             </div>
-            <p>{{ description }}</p>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col" class="key">{{ $t('message.grid.coins') }}</th>
-                        <th scope="col" class="value">{{ coins }}</th>
-                    </tr>
-                </thead>
+            <table class="table table-bordered data-grid-mobile">
                 <tbody>
                     <tr>
-                        <th scope="row" class="key">{{ $t('message.grid.spread_buying') }}</th>
+                        <th scope="row" class="key">{{ $t('message.grid.spread') }}</th>
                         <td class="value">{{ spread_buying }} / {{ spread_selling }}</td>
                     </tr>
                     <tr>
@@ -30,12 +24,70 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
-        <p class="cta">{{ $t('message.grid.go_to') }}
+            <p class="cta-mobile">{{ $t('message.grid.go_to') }}
             <a class="btn btn-primary btn-sm" :href="dynamicUrl" role="button" target="_blank">
                 {{ title }}
             </a>
-        </p>
+            </p>
+            <p class="des">{{ description }}</p>
+        </div>
+        <div class="btn-container-mobile">
+          <button v-if="isActive"
+            class="btn btn-primary btn-sm"
+            @click="textToggle"
+            >&#128317;
+          </button>
+          <button v-else
+            class="btn btn-primary btn-sm"
+            @click="textToggle"
+            >&#128316;
+          </button>
+        </div>
+      </div>
+      <div v-else class="desktop">
+        <table class="table table-bordered">
+          <tbody>
+            <tr class="top-row">
+              <th
+                scope="col"
+                rowspan="2"
+                class="title-cell text-center title pt-4">
+                  <a :href="dynamicUrl" class="title-url" target="_blank">
+                    {{ title }}
+                  </a>
+              </th>
+              <th scope="col" :is="coinSet" class="coin-icons"></th>
+              <th
+                scope="col"
+                class="text-center stat-heading">{{ $t('message.grid.spread_buying') }}</th>
+              <th
+                scope="col"
+                class="text-center stat-heading">{{ $t('message.grid.spread_selling') }}</th>
+              <th
+                scope="col"
+                class="text-center stat-heading">{{ $t('message.grid.fees') }}</th>
+              <th scope="col" rowspan="2" class="button-cell text-center">
+                <p class="mb-2">{{ $t('message.grid.go_to') }} </p>
+                <a class="btn btn-primary"
+                  :href="dynamicUrl"
+                  role="button"
+                  target="_blank">
+                    {{ title }}
+                </a>
+              </th>
+            </tr>
+            <tr>
+              <td class="coin-text">{{ coins }}</td>
+              <td class="text-center stat">{{ spread_buying }}</td>
+              <td class="text-center stat">{{ spread_selling }}</td>
+              <td class="text-center stat">{{ fees }}</td>
+            </tr>
+            <tr>
+              <td colspan="6" class="p-3">{{ description }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 </template>
 
@@ -45,9 +97,21 @@ import ShakepayCoins from './coin_icons/ShakepayCoins.vue';
 import CoinsmartCoins from './coin_icons/CoinsmartCoins.vue';
 import NetcoinsCoins from './coin_icons/NetcoinsCoins.vue';
 import NdaxCoins from './coin_icons/NdaxCoins.vue';
+import WealthsimpleCoins from './coin_icons/WealthsimpleCoins.vue';
 
 export default {
-  name: 'PlatformCard',
+  data() {
+    return {
+      isActive: true,
+      // eslint-disable-next-line no-restricted-globals
+      windowWidth: screen.width,
+    };
+  },
+  methods: {
+    textToggle() {
+      this.isActive = !this.isActive;
+    },
+  },
   props: ['title', 'description', 'spread', 'fees', 'referral', 'spread_buying', 'spread_selling', 'coins', 'image_coins', 'coin_ownership'],
   computed: {
     coinSet() {
@@ -62,6 +126,8 @@ export default {
           return NetcoinsCoins;
         case 'NDAX':
           return NdaxCoins;
+        case 'Wealthsimple':
+          return WealthsimpleCoins;
         default: return null;
       }
     },
@@ -87,61 +153,20 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.container {
-    background: $lightest;
-    color: $darkest;
-    width: 94%;
-    border: 5px solid $light;
-    border-radius: 2%;
-    margin-bottom: 20px;
-    padding: 10px;
-}
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.title {
-    font-size: 22px;
-}
+@import './public/scss/_mobile-card.scss';
+@import './public/scss/_desktop-card.scss';
+
 .title-url {
     text-decoration: none;
     color: $medium;
 }
-.key {
-    width: 50%;
+.active {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  height: 300px;
 }
-.value {
-    font-weight: normal;
-    text-align: center;;
-}
-.cta {
-    text-align:center;
-    font-weight: bold;
-    a {
-        background: $attention;
-        color: $darkest;
-        border-color: $darkest;
-        border-width: 2px;
-        font-weight: bold;
-        padding: 7px;
-    }
-}
-@media only screen and (min-width: 576px) {
-  .container {
-      border-radius: 1%;
-  }
-}
-@media only screen and (min-width: 996px) {
-  .container {
-      max-width: 29%;
-      margin-top: 20px;
-  }
-  .information {
-      height: 88%;
-  }
-  .cta {
-      height: 12%;
-  }
-}
+
 </style>

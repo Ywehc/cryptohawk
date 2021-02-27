@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-      <MobileGrid v-if="windowWidth < 576" />
+      <MobileGrid v-if="windowWidth < 768" />
       <DesktopGrid v-else/>
   </div>
 </template>

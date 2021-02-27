@@ -10,7 +10,7 @@ const messages = {
     message: {
       brand: {
         name: 'cryptohawk',
-        description: 'Cryptocurrency Platform and Exchange information for Canadian investors and traders.',
+        description: 'Convenient cryptocurrency platform and exchange information for Canadian investors and traders.',
       },
       nav: {
         home: 'Home',
@@ -39,10 +39,11 @@ const messages = {
         },
         ndax: {
           description: 'NDAX is a full-featured Canadian exchange with a deep set of trading tools and a transparent fee structure. They are registered under FINTRAC and would be our recommendation for a serious trader.',
-          coins: 'Bitcoin CAD, Bitcoin USD, Ethereum, Cardano, Litecoin, Ripple, Dot, Tether, Stellar, Link, EOS',
+          coins: 'Bitcoin, Ethereum, Cardano, Litecoin, Ripple, Dot, Tether, Stellar, Link, EOS',
         },
         coins: 'Available Coins',
-        spread_buying: 'Cost to Buy / Sell',
+        spread: 'Cost to Buy/Sell',
+        spread_buying: 'Cost to Buy',
         spread_selling: 'Cost to Sell',
         fees: 'Additional Fees',
         referrals: 'Referrals',
@@ -66,7 +67,7 @@ const messages = {
     message: {
       brand: {
         name: 'cryptohawk',
-        description: "Informations sur la plateforme et l'échange de crypto-monnaie pour les investisseurs et les commerçants canadiens.",
+        description: "Informations pratiques sur les plateformes et les échanges de crypto-monnaie pour les investisseurs et les commerçants canadiens.",
       },
       nav: {
         home: `Page d'accueil`,
@@ -95,9 +96,10 @@ const messages = {
         },
         ndax: {
           description: `NDAX est une bourse canadienne complète avec un ensemble complet d'outils de négociation et une structure de frais transparente. Ils sont enregistrés sous CANAFE et seraient notre recommandation pour un commerçant sérieux.`,
-          coins: 'Bitcoin CAD, Bitcoin USD, Ethereum, Cardano, Litecoin, Ripple, Dot, Tether, Stellar, Link, EOS',
+          coins: 'Bitcoin, Ethereum, Cardano, Litecoin, Ripple, Dot, Tether, Stellar, Link, EOS',
         },
         coins: 'Pièces disponibles',
+        spread: `Coût d'achat/de vente`,
         spread_buying: `Coût d'achat`,
         spread_selling: `Coût de vente`,
         fees: 'Frais supplémentaires',
