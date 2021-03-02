@@ -1,7 +1,4 @@
 .desktop {
-    table {
-        margin-top: 40px;
-    }
     tr {
         border-color: $medium;
         background-color: $lightest;
@@ -42,7 +39,7 @@
         border-color: orange;
     }
     @media only screen and (min-width: 1200px) {
-    .coin-icons, .coin-text {
+    .coin-text {
         width: 52%;
         }
     }

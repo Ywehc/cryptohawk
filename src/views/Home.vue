@@ -7,7 +7,7 @@
 
 <script>
 import MobileGrid from '@/components/mobile/MobileGrid.vue';
-import DesktopGrid from '@/components/DesktopGrid.vue';
+import DesktopGrid from '@/components/desktop/DesktopGrid.vue';
 
 export default {
   name: 'Home',
