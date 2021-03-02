@@ -1,6 +1,6 @@
 <template>
     <tr>
-        <td><img  :src="img_url" alt="bitcoin" class="icon"></td>
+        <td><img  :src="img_url" :alt="name" class="icon"></td>
         <td >{{ name }}</td>
         <td>${{ price }}</td>
     </tr>
