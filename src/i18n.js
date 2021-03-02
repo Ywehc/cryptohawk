@@ -61,6 +61,7 @@ const messages = {
         message: 'Your message',
         send: 'Send',
       },
+      nomics: 'Crypto Market Cap & Pricing Data Provided By Nomics.',
     },
   },
   fr: {
@@ -118,6 +119,7 @@ const messages = {
         message: 'Votre message',
         send: 'Envoyer',
       },
+      nomics: 'Données de capitalisation boursière et de prix des crypto-monnaies fournies par Nomics.',
     },
   },
 };

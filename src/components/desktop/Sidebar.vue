@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar">
-      <p class="text-center p-3">Current prices in $CAD</p>
+      <p class="text-center p-3 heading">Current prices in $CAD</p>
       <table class="table table-striped">
         <tbody>
           <SidebarRow
@@ -90,9 +90,11 @@
             :price="Math.round((currencies.data &&
               currencies.data[13] || {}).price * 100) / 100"
           />
-
         </tbody>
       </table>
+      <p class="nomics text-center">
+        <a href="https://nomics.com">{{ $t('message.nomics') }}</a>
+      </p>
     </div>
 </template>
 
@@ -120,9 +122,21 @@ export default {
 <style scoped lang="scss">
 .sidebar {
     background-color: $light;
-    font-weight: bold;
+}
+.heading {
+  font-weight: bold;
+  color: $darkest;
 }
 .table {
   font-size: 14px;
+  font-weight: bold;
+}
+.nomics {
+  font-size: 12px;
+  font-weight: bold;
+  a {
+    text-decoration: none;
+    color: $dark;
+  }
 }
 </style>
