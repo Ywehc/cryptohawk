@@ -21,6 +21,7 @@ export default {
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .desktop-grid {
   padding-top: 40px;
@@ -34,9 +35,9 @@ h2 {
 }
 .cards {
   padding-bottom: 90px;
-  width: 75%;
+  width: 80%;
 }
 .sidebar {
-  width: 25%;
+  width: 19%;
 }
 </style>
