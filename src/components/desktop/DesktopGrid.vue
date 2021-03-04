@@ -32,6 +32,7 @@ h2 {
   width: 90%;
   margin: 80px auto;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 .cards {
   padding-bottom: 90px;

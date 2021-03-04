@@ -87,6 +87,7 @@
             </tr>
           </tbody>
         </table>
+        <Sidebar />
       </div>
     </div>
 </template>
@@ -156,6 +157,9 @@ export default {
 @import './public/scss/_mobile-card.scss';
 @import './public/scss/_desktop-card.scss';
 
+.desktop {
+  font-family: 'Poppins', sans-serif;
+}
 .title-url {
     text-decoration: none;
     color: $medium;
@@ -167,6 +171,9 @@ export default {
   -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   height: 300px;
+}
+.coin-text {
+  font-weight: light;
 }
 
 </style>
