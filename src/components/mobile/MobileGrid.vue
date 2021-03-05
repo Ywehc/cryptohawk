@@ -1,16 +1,34 @@
 <template>
     <div class="mobile-grid">
       <p class="description">{{ $t('message.brand.description') }}</p>
-      <platform-cards />
+      <mobile-nav v-on:menu-selection="renderView"/>
+      <component :is="componentName" />
     </div>
 </template>
 
 <script>
 import PlatformCards from '../PlatformCards.vue';
+import MobileNav from './MobileNav.vue';
+import Contact from '../../views/Contact.vue';
+import MobilePrices from './MobilePrices.vue';
 
 export default {
-  components: { PlatformCards },
-  name: 'MobileGrid',
+  components: {
+    platforms: PlatformCards,
+    contact: Contact,
+    prices: MobilePrices,
+    MobileNav,
+  },
+  data() {
+    return {
+      componentName: 'platforms',
+    };
+  },
+  methods: {
+    renderView(value) {
+      this.componentName = value;
+    },
+  },
 };
 </script>
 
@@ -23,7 +41,6 @@ export default {
 }
 .mobile-grid {
   background: $dark;
-  padding: 10px;
   padding-top: 20px;
 }
 
