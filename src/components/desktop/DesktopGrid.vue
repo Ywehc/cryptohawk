@@ -3,17 +3,17 @@
       <h2>{{ $t('message.brand.description') }}</h2>
       <div class="container">
         <platform-cards class="cards"/>
-        <sidebar class="sidebar" />
+        <prices class="sidebar" />
       </div>
     </div>
 </template>
 
 <script>
-import Sidebar from './Sidebar.vue';
+import Prices from '../Prices.vue';
 import PlatformCards from '../PlatformCards.vue';
 
 export default {
-  components: { PlatformCards, Sidebar },
+  components: { PlatformCards, Prices },
 };
 </script>
 
