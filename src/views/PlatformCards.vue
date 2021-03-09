@@ -58,11 +58,10 @@
 </template>
 
 <script>
-import PlatformCard from './PlatformCard.vue';
+import PlatformCard from '../components/PlatformCard.vue';
 
 export default {
   components: { PlatformCard },
-  name: 'PlatformCards',
   computed: {
     newtonReferral() {
       return (`$25 ${this.$t('message.grid.to_each_party')}`);

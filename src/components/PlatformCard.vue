@@ -87,7 +87,6 @@
             </tr>
           </tbody>
         </table>
-        <Sidebar />
       </div>
     </div>
 </template>

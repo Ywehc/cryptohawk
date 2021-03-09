@@ -1,38 +1,14 @@
 <template>
     <div class="mobile-grid">
       <p class="description">{{ $t('message.brand.description') }}</p>
-      <ul class="nav-container">
-        <li
-          v-for="item in items"
-          :key="item.message"
-          @click="activeComponent = item">
-          {{item}}
-        </li>
-      </ul>
-      <component :is="activeComponent"/>
+      <nav class="nav-container">
+        <router-link class="link" to="/platforms">Platforms</router-link>
+        <router-link class="link" to="/prices">Prices</router-link>
+        <router-link class="link" to="/contact">Contact</router-link>
+      </nav>
+      <router-view />
     </div>
 </template>
-
-<script>
-import Platforms from '../PlatformCards.vue';
-import Contact from '../../views/Contact.vue';
-import Prices from '../Prices.vue';
-
-export default {
-  components: {
-    Platforms,
-    Contact,
-    Prices,
-  },
-  data() {
-    return {
-      items: [
-        'platforms', 'prices', 'contact'],
-      activeComponent: 'platforms',
-    };
-  },
-};
-</script>
 
 <style scoped lang="scss">
 .mobile-grid {
@@ -50,21 +26,21 @@ export default {
     font-family: 'Prompt', sans-serif;
     color: $lightest;
     padding-left: 0;
-    li {
+    .link {
       list-style-type: none;
       padding: .8em;
       flex: 1;
       text-align: center;
       background: $medium;
       color: $darkest;
+      text-decoration: none;
       p {
           margin: .2rem auto;
       }
     }
+    .router-link-active {
+      color: $lightest;
+    }
   }
 }
-.active {
-  font-weight: bold;
-}
-
 </style>

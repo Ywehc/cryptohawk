@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Prices from '../Prices.vue';
-import PlatformCards from '../PlatformCards.vue';
+import Prices from '../views/Prices.vue';
+import PlatformCards from '../views/PlatformCards.vue';
 
 export default {
   components: { PlatformCards, Prices },

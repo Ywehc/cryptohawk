@@ -100,7 +100,7 @@
 
 <script>
 import axios from 'axios';
-import PricesRow from './PricesRow.vue';
+import PricesRow from '../components/PricesRow.vue';
 
 export default {
   components: { PricesRow },
