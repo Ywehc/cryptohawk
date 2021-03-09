@@ -25,7 +25,7 @@
   letter-spacing: 1.2px;
   font-size: 22px;
   text-decoration: none;
-  color: $lightest;
+  color: $light;
 }
 .brand-text :hover {
   color: $light;
