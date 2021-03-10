@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <div v-if="windowWidth < 768" class="mobile">
+      <div class="mobile d-sm-flex d-lg-none">
         <div v-bind:class="{active: isActive}">
             <div class="header-mobile">
                 <a :href="dynamicUrl" class="title-url" target="_blank">
@@ -44,7 +44,7 @@
           </button>
         </div>
       </div>
-      <div v-else class="desktop">
+      <div class="desktop d-none d-lg-block">
         <table class="table table-bordered">
           <tbody>
             <tr class="top-row">
@@ -103,8 +103,6 @@ export default {
   data() {
     return {
       isActive: true,
-      // eslint-disable-next-line no-restricted-globals
-      windowWidth: screen.width,
     };
   },
   methods: {
