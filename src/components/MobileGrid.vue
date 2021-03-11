@@ -6,6 +6,7 @@
         <router-link class="link" to="/prices">Prices</router-link>
         <router-link class="link" to="/contact">Contact</router-link>
       </nav>
+      <div class="fade"></div>
       <router-view />
     </div>
 </template>
@@ -41,6 +42,11 @@
     .router-link-active {
       color: $lightest;
     }
+  }
+  .fade {
+    height: 50px;
+    background: linear-gradient(#e66465, #9198e5);
+    // why is this not working
   }
 }
 </style>

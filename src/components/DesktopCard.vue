@@ -1,49 +1,5 @@
 <template>
     <div class="container">
-      <div class="mobile d-sm-flex d-lg-none">
-        <div v-bind:class="{active: isActive}">
-            <div class="header-mobile">
-                <a :href="dynamicUrl" class="title-url" target="_blank">
-                    <h2 class="title">{{ title }}</h2>
-                </a>
-                <div :is="coinSet" class="coin-icons-mobile"></div>
-            </div>
-            <table class="table table-bordered data-grid-mobile">
-                <tbody>
-                    <tr>
-                        <th scope="row" class="key">{{ $t('message.grid.spread') }}</th>
-                        <td class="value">{{ spread_buying }} / {{ spread_selling }}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="key">{{ $t('message.grid.fees') }}</th>
-                        <td class="value">{{ fees }}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="key">{{ $t('message.grid.referrals') }}</th>
-                        <td colspan="2" class="value">{{ referral }}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="cta-mobile">{{ $t('message.grid.go_to') }}
-            <a class="btn btn-primary btn-sm" :href="dynamicUrl" role="button" target="_blank">
-                {{ title }}
-            </a>
-            </p>
-            <p class="des">{{ description }}</p>
-        </div>
-        <div class="btn-container-mobile">
-          <button v-if="isActive"
-            class="btn btn-primary btn-sm"
-            @click="textToggle"
-            >&#128317;
-          </button>
-          <button v-else
-            class="btn btn-primary btn-sm"
-            @click="textToggle"
-            >&#128316;
-          </button>
-        </div>
-      </div>
       <div class="desktop d-none d-lg-block">
         <table class="table table-bordered">
           <tbody>

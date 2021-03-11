@@ -39,6 +39,6 @@ h2 {
   width: 80%;
 }
 .sidebar {
-  width: 19%;
+  width: 24%;
 }
 </style>
