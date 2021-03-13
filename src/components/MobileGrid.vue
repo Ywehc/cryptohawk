@@ -1,6 +1,6 @@
 <template>
     <div class="mobile-grid">
-      <p class="description">{{ $t('message.brand.description') }}</p>
+      <p class="description m-3">{{ $t('message.brand.description') }}</p>
       <div class="vertical-light"></div>
       <nav class="nav-container">
         <router-link class="link" to="/platforms">Platforms</router-link>
@@ -15,7 +15,6 @@
 
 <style scoped lang="scss">
 .mobile-grid {
-  padding-top: 10px;
   .description {
   color: $lightest;
   text-align: center;

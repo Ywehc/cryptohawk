@@ -7,7 +7,7 @@
 
 <style lang="scss">
 #nav {
-  padding: 20px 0px;
+  padding: 20px 0px 0px 0px;
   margin: auto;
   text-align: center;
   color: $lightest;
@@ -15,7 +15,7 @@
   flex-direction: column;
 }
 .logo {
-  width: 40px;
+  width: 30px;
   margin: auto;
   filter: invert(92%) sepia(18%) saturate(145%) hue-rotate(196deg) brightness(99%) contrast(93%);
 }
@@ -38,7 +38,6 @@
   }
   .logo {
     margin-left: 0;
-    width: 30px;
   }
 }
 </style>
