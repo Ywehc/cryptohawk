@@ -7,8 +7,7 @@
         <router-link class="link" to="/prices">Prices</router-link>
         <router-link class="link" to="/contact">Contact</router-link>
       </nav>
-      <!-- <div class="vertical-light"></div>
-      <div class="vertical-gradient"></div> -->
+      <!-- <div class="vertical-gradient"></div> -->
       <div class="vertical-light"></div>
       <router-view />
     </div>
@@ -32,15 +31,15 @@
       padding: .4em;
       flex: 1;
       text-align: center;
-      background: $medium;
-      color: $darkest;
+      background: $lightest;
+      color: $medium;
       text-decoration: none;
       p {
           margin: .2rem auto;
       }
     }
     .router-link-active {
-      color: $lightest;
+      color: $darkest;
     }
   }
 }
@@ -55,6 +54,6 @@
   }
   .vertical-light {
     height: 4px;
-    background: $lightest;
+    background: $medium;
   }
 </style>
