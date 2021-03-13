@@ -55,29 +55,13 @@
     color: $darkest;
   }
   .btn-primary {
-        background-color: $darkest;
-        color: orange;
+        background-color: $attention;
+        color: $darkest;
         font-weight: bold;
+        border: 2px solid $darkest;
     }
     .btn-primary:hover {
-        background-color: orange;
-        color: $darkest;
-        border-color: orange;
+        background-color: $darkest;
+        color: $attention;
     }
 }
-
-
-
-// .btn-container-mobile {
-//   button {
-//     position: absolute;
-//     left:0;
-//     right:0;
-//     margin-left:auto;
-//     margin-right:auto;
-//     margin-top: -5px;
-//     background: $darkest;
-//     border: 2px solid $light;
-//     color: $light;
-//   }
-// }
