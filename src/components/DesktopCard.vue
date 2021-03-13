@@ -112,10 +112,7 @@ export default {
 .desktop {
   font-family: 'Poppins', sans-serif;
 }
-.title-url {
-    text-decoration: none;
-    color: $medium;
-}
+
 .active {
   overflow: hidden;
   -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
