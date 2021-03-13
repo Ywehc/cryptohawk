@@ -3,7 +3,7 @@
       <h2>{{ $t('message.brand.description') }}</h2>
       <div class="container">
         <platform-cards class="cards"/>
-        <prices class="sidebar" />
+        <prices class="sidebar d-none d-lg-block" />
       </div>
     </div>
 </template>
@@ -39,6 +39,6 @@ h2 {
   width: 80%;
 }
 .sidebar {
-  width: 19%;
+  width: 24%;
 }
 </style>
