@@ -1,6 +1,7 @@
 .mobile {
   border-radius: 0!important;
   background-color: $darkest!important;
+  border: none!important;
   .active {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -20,9 +21,31 @@
   }
   .tab-content {
     background-color: $light;
+    padding-left: 0;
+    // border-left: 4px solid $lightest;
+  }
+  .nav-link {
+    border-right: 4px solid $lightest!important;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: $light;
   }
   .nav-link.active {
     background-color: $light!important;
+    border-right: none!important;
+    color: $darkest!important;
+  }
+  .tab-content-header {
+    color: $darkest;
+    text-align: center;
+    font-size: 18px;
+  }
+  .mobile-coin-icons {
+    text-align: center;
+  }
+  .table {
+    font-size: 12px;
   }
 }
 

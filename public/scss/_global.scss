@@ -6,8 +6,13 @@ $dark: #3C457D;
 $medium: #536ADE;
 $light: #B1BBEC;
 $lightest: #E6E8F4;
-$attention: #34eb34;
+$attention: orange;
 
 $coin_icon_width: 18px;
 $coin_icon_height: 18px;
 $coin_icon_margin: 4px;
+
+@media only screen and (max-width: 768px) {
+    $coin_icon_width: 8px;
+    $coin_icon_height: 8px;
+}

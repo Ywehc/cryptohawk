@@ -3,81 +3,243 @@
       <div class="mobile-container d-sm-flex d-lg-none">
         <b-card no-body class="mobile">
           <b-tabs vertical>
-            <b-tab class="platform-tab" :title="platform.coinsmart.title">
-              <b-card-text>Tab contents 1</b-card-text>
+            <b-tab class="platform-tab" :title="this.$store.state.platforms.coinsmart.title">
+              <b-card-text>
+                <mobile-card
+                  class="my-4"
+                  :title="this.$store.state.platforms.coinsmart.title">
+                </mobile-card>
+                <coinsmart-coins class="mobile-coin-icons my-3"/>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.spread_buying') }}</th>
+                      <td>{{ this.$store.state.platforms.coinsmart.spread_buying }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.spread_selling') }}</th>
+                      <td>{{ this.$store.state.platforms.coinsmart.spread_selling }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.fees') }}</th>
+                      <td>{{ this.$store.state.platforms.coinsmart.fees}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.referrals') }}</th>
+                      <td>{{ this.coinsmartReferral }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="px-3">{{ this.$t('message.grid.coinsmart.description') }}</p>
+              </b-card-text>
             </b-tab>
-            <b-tab class="platform-tab" :title="platform.ndax.title">
-              <b-card-text>Tab contents 2</b-card-text>
+            <b-tab class="platform-tab" :title="this.$store.state.platforms.ndax.title">
+              <b-card-text>
+                <mobile-card
+                  class="my-4"
+                  :title="this.$store.state.platforms.ndax.title">
+                </mobile-card>
+                <ndax-coins class="mobile-coin-icons my-3"/>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.spread_buying') }}</th>
+                      <td>{{ this.$store.state.platforms.ndax.spread_buying }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.spread_selling') }}</th>
+                      <td>{{ this.$store.state.platforms.ndax.spread_selling }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.fees') }}</th>
+                      <td>{{ this.$store.state.platforms.ndax.fees}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.referrals') }}</th>
+                      <td>{{ this.ndaxReferral }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="px-3">{{ this.$t('message.grid.ndax.description') }}</p>
+              </b-card-text>
             </b-tab>
-            <b-tab class="platform-tab" :title="platform.netcoins.title">
-              <b-card-text>Tab contents 3</b-card-text>
+            <b-tab class="platform-tab" :title="this.$store.state.platforms.netcoins.title">
+              <b-card-text>
+                <mobile-card
+                  class="my-4"
+                  :title="this.$store.state.platforms.netcoins.title">
+                </mobile-card>
+                <netcoins-coins class="mobile-coin-icons my-3"/>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.spread_buying') }}</th>
+                      <td>{{ this.$store.state.platforms.netcoins.spread_buying }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.spread_selling') }}</th>
+                      <td>{{ this.$store.state.platforms.netcoins.spread_selling }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.fees') }}</th>
+                      <td>{{ this.$store.state.platforms.netcoins.fees}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.referrals') }}</th>
+                      <td>{{ this.netcoinsReferral }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="px-3">{{ this.$t('message.grid.netcoins.description') }}</p>
+              </b-card-text>
             </b-tab>
-            <b-tab class="platform-tab" :title="platform.newton.title">
-              <b-card-text>Tab contents 4</b-card-text>
+            <b-tab class="platform-tab" :title="this.$store.state.platforms.newton.title">
+              <b-card-text>
+                <mobile-card
+                  class="my-4"
+                  :title="this.$store.state.platforms.newton.title">
+                </mobile-card>
+                <newton-coins class="mobile-coin-icons my-3"/>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.spread_buying') }}</th>
+                      <td>{{ this.$store.state.platforms.newton.spread_buying }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.spread_selling') }}</th>
+                      <td>{{ this.$store.state.platforms.newton.spread_selling }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.fees') }}</th>
+                      <td>{{ this.$store.state.platforms.newton.fees}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.referrals') }}</th>
+                      <td>{{ this.newtonReferral }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="px-3">{{ this.$t('message.grid.newton.description') }}</p>
+              </b-card-text>
             </b-tab>
-            <b-tab class="platform-tab" :title="platform.shakepay.title">
-              <b-card-text>Tab contents 5</b-card-text>
+            <b-tab class="platform-tab" :title="this.$store.state.platforms.shakepay.title">
+              <b-card-text>
+                <mobile-card
+                  class="my-4"
+                  :title="this.$store.state.platforms.shakepay.title">
+                </mobile-card>
+                <shakepay-coins class="mobile-coin-icons my-3"/>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.spread_buying') }}</th>
+                      <td>{{ this.$store.state.platforms.shakepay.spread_buying }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.spread_selling') }}</th>
+                      <td>{{ this.$store.state.platforms.shakepay.spread_selling }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.fees') }}</th>
+                      <td>{{ this.$store.state.platforms.shakepay.fees}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.referrals') }}</th>
+                      <td>{{ this.shakepayReferral }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="px-3">{{ this.$t('message.grid.shakepay.description') }}</p>
+              </b-card-text>
             </b-tab>
-            <b-tab class="platform-tab" :title="platform.wealthsimple.title">
-              <b-card-text>Tab contents 6</b-card-text>
+            <b-tab class="platform-tab" :title="this.$store.state.platforms.wealthsimple.title">
+              <b-card-text>
+              <mobile-card
+                  class="my-4"
+                  :title="this.$store.state.platforms.wealthsimple.title">
+                </mobile-card>
+                <wealthsimple-coins class="mobile-coin-icons my-3"/>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.spread_buying') }}</th>
+                      <td>{{ this.$store.state.platforms.wealthsimple.spread_buying }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.spread_selling') }}</th>
+                      <td>{{ this.$store.state.platforms.wealthsimple.spread_selling }}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.fees') }}</th>
+                      <td>{{ this.$store.state.platforms.wealthsimple.fees}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">{{ this.$t('message.grid.referrals') }}</th>
+                      <td>{{ this.wealthsimpleReferral }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="px-3">{{ this.$t('message.grid.wealthsimple.description') }}</p>
+              </b-card-text>
             </b-tab>
           </b-tabs>
         </b-card>
       </div>
       <div class="d-none d-lg-block">
         <desktop-card
-          :title="platform.coinsmart.title"
-          :description="platform.coinsmart.description"
-          :spread_buying="platform.coinsmart.spread_buying"
-          :spread_selling="platform.coinsmart.spread_selling"
-          :fees="platform.coinsmart.fees"
+          :title="this.$store.state.platforms.coinsmart.title"
+          :description="this.$t('message.grid.coinsmart.description')"
+          :spread_buying="this.$store.state.platforms.coinsmart.spread_buying"
+          :spread_selling="this.$store.state.platforms.coinsmart.spread_selling"
+          :fees="this.$store.state.platforms.coinsmart.fees"
           :referral="coinsmartReferral"
-          :coins="platform.coinsmart.coins">
+          :coins="this.$t('message.grid.coinsmart.coins')">
         </desktop-card>
         <desktop-card
-          :title="platform.ndax.title"
-          :description="platform.ndax.description"
-          :spread_buying="platform.ndax.spread_buying"
-          :spread_selling="platform.ndax.spread_selling"
-          :fees="platform.ndax.fees"
+          :title="this.$store.state.platforms.ndax.title"
+          :description="this.$t('message.grid.ndax.description')"
+          :spread_buying="this.$store.state.platforms.ndax.spread_buying"
+          :spread_selling="this.$store.state.platforms.ndax.spread_selling"
+          :fees="this.$store.state.platforms.ndax.fees"
           :referral="ndaxReferral"
-          :coins="platform.ndax.coins">
+          :coins="this.$t('message.grid.ndax.coins')">
         </desktop-card>
         <desktop-card
-          :title="platform.netcoins.title"
-          :description="platform.netcoins.description"
-          :spread_buying="platform.netcoins.spread_buying"
-          :spread_selling="platform.netcoins.spread_selling"
-          :fees="platform.netcoins.fees"
+          :title="this.$store.state.platforms.netcoins.title"
+          :description="this.$t('message.grid.netcoins.description')"
+          :spread_buying="this.$store.state.platforms.netcoins.spread_buying"
+          :spread_selling="this.$store.state.platforms.netcoins.spread_selling"
+          :fees="this.$store.state.platforms.netcoins.fees"
           :referral="netcoinsReferral"
-          :coins="platform.netcoins.coins">
+          :coins="this.$t('message.grid.netcoins.coins')">
         </desktop-card>
         <desktop-card
-          :title="platform.newton.title"
-          :description="platform.newton.description"
-          :spread_buying="platform.newton.spread_buying"
-          :spread_selling="platform.newton.spread_selling"
-          :fees="platform.newton.fees"
+          :title="this.$store.state.platforms.newton.title"
+          :description="this.$t('message.grid.newton.description')"
+          :spread_buying="this.$store.state.platforms.newton.spread_buying"
+          :spread_selling="this.$store.state.platforms.newton.spread_selling"
+          :fees="this.$store.state.platforms.newton.fees"
           :referral="newtonReferral"
-          :coins="platform.newton.coins">
+          :coins="this.$t('message.grid.newton.coins')">
         </desktop-card>
         <desktop-card
-          :title="platform.shakepay.title"
-          :description="platform.shakepay.description"
-          :spread_buying="platform.shakepay.spread_buying"
-          :spread_selling="platform.shakepay.spread_selling"
-          :fees="platform.shakepay.fees"
+          :title="this.$store.state.platforms.shakepay.title"
+          :description="this.$t('message.grid.shakepay.description')"
+          :spread_buying="this.$store.state.platforms.shakepay.spread_buying"
+          :spread_selling="this.$store.state.platforms.shakepay.spread_selling"
+          :fees="this.$store.state.platforms.shakepay.fees"
           :referral="shakepayReferral"
-          :coins="platform.shakepay.coins">
+          :coins="this.$t('message.grid.shakepay.coins')">
         </desktop-card>
         <desktop-card
-          :title="platform.wealthsimple.title"
-          :description="platform.wealthsimple.description"
-          :spread_buying="platform.wealthsimple.spread_buying"
-          :spread_selling="platform.wealthsimple.spread_selling"
+          :title="this.$store.state.platforms.wealthsimple.title"
+          :description="this.$t('message.grid.wealthsimple.description')"
+          :spread_buying="this.$store.state.platforms.wealthsimple.spread_buying"
+          :spread_selling="this.$store.state.platforms.wealthsimple.spread_selling"
           :fees="wealthsimpleFees"
           :referral="wealthsimpleReferral"
-          :coins="platform.wealthsimple.coins">
+          :coins="this.$t('message.grid.wealthsimple.coins')">
         </desktop-card>
       </div>
     </div>
@@ -85,62 +247,24 @@
 
 <script>
 import DesktopCard from '../components/DesktopCard.vue';
+import MobileCard from '../components/MobileCard.vue';
+import NewtonCoins from '../components/coin_icons/NewtonCoins.vue';
+import ShakepayCoins from '../components/coin_icons/ShakepayCoins.vue';
+import CoinsmartCoins from '../components/coin_icons/CoinsmartCoins.vue';
+import NetcoinsCoins from '../components/coin_icons/NetcoinsCoins.vue';
+import NdaxCoins from '../components/coin_icons/NdaxCoins.vue';
+import WealthsimpleCoins from '../components/coin_icons/WealthsimpleCoins.vue';
 
 export default {
-  components: { DesktopCard },
-  data() {
-    return {
-      platform: {
-        coinsmart: {
-          title: this.$t('message.grid.coinsmart.title'),
-          coins: this.$t('message.grid.coinsmart.coins'),
-          description: this.$t('message.grid.coinsmart.description'),
-          spread_buying: '1.39%',
-          spread_selling: '2.4%',
-          fees: '0.2% / 2%',
-        },
-        ndax: {
-          title: this.$t('message.grid.ndax.title'),
-          coins: this.$t('message.grid.ndax.coins'),
-          description: this.$t('message.grid.ndax.description'),
-          spread_buying: '2%',
-          spread_selling: '2%',
-          fees: this.$t('message.grid.no'),
-        },
-        newton: {
-          title: this.$t('message.grid.newton.title'),
-          coins: this.$t('message.grid.newton.coins'),
-          description: this.$t('message.grid.newton.description'),
-          spread_buying: '0.57%',
-          spread_selling: '0.64%',
-          fees: this.$t('message.grid.no'),
-        },
-        netcoins: {
-          title: this.$t('message.grid.netcoins.title'),
-          coins: this.$t('message.grid.netcoins.coins'),
-          description: this.$t('message.grid.netcoins.description'),
-          spread_buying: '0.89%',
-          spread_selling: '0.67%',
-          fees: '0.005%',
-        },
-        shakepay: {
-          title: this.$t('message.grid.shakepay.title'),
-          coins: this.$t('message.grid.shakepay.coins'),
-          description: this.$t('message.grid.shakepay.description'),
-          spread_buying: '1.41%',
-          spread_selling: '1.3%',
-          fees: this.$t('message.grid.no'),
-        },
-        wealthsimple: {
-          title: this.$t('message.grid.wealthsimple.title'),
-          coins: this.$t('message.grid.coinsmart.coins'),
-          description: this.$t('message.grid.coinsmart.description'),
-          spread_buying: '2%',
-          spread_selling: '2%',
-          fees: '0.2% / 2%',
-        },
-      },
-    };
+  components: {
+    DesktopCard,
+    MobileCard,
+    CoinsmartCoins,
+    NdaxCoins,
+    NetcoinsCoins,
+    NewtonCoins,
+    ShakepayCoins,
+    WealthsimpleCoins,
   },
   computed: {
     newtonReferral() {

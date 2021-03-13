@@ -88,17 +88,17 @@ export default {
     dynamicUrl() {
       switch (this.title) {
         case 'Newton':
-          return 'https://web.newton.co/r/RIC4H2';
+          return this.$store.state.platforms.newton.url;
         case 'Shakepay':
-          return 'https://shakepay.me/r/CIORKOZ';
+          return this.$store.state.platforms.shakepay.url;
         case 'Wealthsimple':
-          return 'https://my.wealthsimple.com/app/public/trade-referral-signup?code=_E1PGG';
+          return this.$store.state.platforms.wealthsimple.url;
         case 'Coinsmart':
-          return 'https://crypto.coinsmart.com/register?promo=Ref-r5JA0V';
+          return this.$store.state.platforms.coinsmart.url;
         case 'Netcoins':
-          return 'https://netcoins.app/r?ac=0J90K3';
+          return this.$store.state.platforms.netcoins.url;
         case 'NDAX':
-          return 'https://one.ndax.io/bfQjUd';
+          return this.$store.state.platforms.ndax.url;
         default: return null;
       }
     },
@@ -107,7 +107,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import './public/scss/_mobile-card.scss';
 @import './public/scss/_desktop-card.scss';
 
 .desktop {
