@@ -8,11 +8,24 @@ $light: #B1BBEC;
 $lightest: #E6E8F4;
 $attention: orange;
 
+$brand-font: 'Prompt', sans-serif;
+$brand-letter-spacing: 1.2px;
+
 $coin_icon_width: 18px;
 $coin_icon_height: 18px;
 $coin_icon_margin: 4px;
 
+$main-text-size: 14px;
+$small-text-size: 12px;
+
+$main-heading-size: 16px;
+
 @media only screen and (max-width: 768px) {
     $coin_icon_width: 8px;
     $coin_icon_height: 8px;
+
+    $main-text-size: 12px;
+    $small-text-size: 10px;
+
+    $main-heading-size: 16px;
 }

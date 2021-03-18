@@ -128,7 +128,7 @@ export default {
   color: $darkest;
 }
 .table {
-  font-size: 14px;
+  font-size: $small-text-size;
   font-weight: bold;
 }
 .nomics {

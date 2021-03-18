@@ -2,6 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Platforms from '../views/PlatformCards.vue';
 import Prices from '../views/Prices.vue';
+import Beginners from '../views/Beginners.vue';
+import Hardware from '../views/Hardware.vue';
 
 Vue.use(VueRouter);
 
@@ -10,6 +12,16 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Platforms,
+  },
+  {
+    path: '/beginners',
+    name: 'Beginners',
+    component: Beginners,
+  },
+  {
+    path: '/hardware',
+    name: 'Hardware',
+    component: Hardware,
   },
   {
     path: '/platforms',
