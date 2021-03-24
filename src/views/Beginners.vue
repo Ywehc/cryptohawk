@@ -44,7 +44,6 @@
 <style lang="scss" scoped>
 .container {
     background: $light;
-    width: 60%;
 }
 h2 {
     font-size: $main-heading-size;
@@ -54,5 +53,10 @@ a {
 }
 p {
     font-size: $main-text-size;
+}
+@media only screen and (min-width: 992px) {
+  .container {
+      width: 60%;
+  }
 }
 </style>

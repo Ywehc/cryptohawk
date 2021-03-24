@@ -36,7 +36,6 @@ export default {
 .container {
     background: $light;
     display: block;
-    width: 60%;
 }
 h2 {
     font-size: $main-heading-size;
@@ -46,5 +45,10 @@ h2 {
 }
 p {
     font-size: $main-text-size;
+}
+@media only screen and (min-width: 992px) {
+  .container {
+      width: 60%;
+  }
 }
 </style>

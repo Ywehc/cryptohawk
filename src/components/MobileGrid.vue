@@ -7,7 +7,6 @@
         <router-link class="link" to="/hardware">Hardware</router-link>
         <router-link class="link" to="/beginners">Beginners</router-link>
       </nav>
-      <!-- <div class="vertical-gradient"></div> -->
       <div class="vertical-light"></div>
       <router-view />
     </div>

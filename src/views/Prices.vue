@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar">
-      <p class="text-center p-3 heading">Current prices in $CAD</p>
+      <p class="text-center p-3 heading">{{ $t('message.prices') }} $CAD</p>
       <table class="table table-striped">
         <tbody>
           <PricesRow
