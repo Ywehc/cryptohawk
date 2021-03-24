@@ -3,7 +3,7 @@
       <h2>{{ $t('message.brand.description') }}</h2>
       <div class="container">
         <DesktopNav class="nav"/>
-        <router-view />
+        <router-view class="main" />
         <Prices class="sidebar d-none d-lg-block" />
       </div>
     </div>
@@ -36,11 +36,11 @@ h2 {
   font-family: 'Poppins', sans-serif;
 }
 .nav {
-  width: 20%;
+  width: 15%;
 }
-.cards {
+.main{
   padding-bottom: 40px;
-  width: 60%;
+  width: 65%;
 }
 .sidebar {
   width: 20%;

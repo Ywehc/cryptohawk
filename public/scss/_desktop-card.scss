@@ -1,50 +1,39 @@
+
 .desktop {
     tr {
         border-color: $medium;
         background-color: $lightest;
     }
-    .title-cell {
-        width: 12%;
-        min-width: 100px;
-        font-size: 24px;
-        background: -webkit-linear-gradient(left, $darkest, orange);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .button-cell {
-        width: 10%;
-        min-width: 100px;
-    }
-    .coin-icons {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
-
-    .stat-heading, .stat, .coin-text {
+    td {
+        padding: 8px;
+        font-weight: bold;
         font-size: 14px;
     }
-    .stat, .coin-text {
-        font-weight: bold;
-    }
     .btn-primary {
-        background-color: $darkest;
-        color: orange;
+        background-color: $attention;
+        border-color: $attention;
+        color: $darkest;
         font-weight: bold;
+        margin-bottom: 8px;
     }
     .btn-primary:hover {
-        background-color: orange;
-        color: $darkest;
-        border-color: orange;
+        background-color: $darkest;
+        color: $attention;
+        border-color: $darkest;
+    }
+    .coin-text {
+        font-weight: light;
     }
     .title-url {
         text-decoration: none;
-        color: $medium;
+        color: $lightest;
     }
-    @media only screen and (min-width: 1200px) {
-    .coin-text {
-        width: 52%;
-        }
+    .title-url:hover {
+        color: $attention;
+    }
+    .title-cell {
+        background: linear-gradient(to left, $medium, $dark);
+        padding: 8px;
+        font-size: 16px;
     }
 }

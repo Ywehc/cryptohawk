@@ -1,45 +1,44 @@
 <template>
     <div class="container">
       <div class="desktop d-none d-lg-block">
-        <table class="table table-bordered">
-          <tbody>
-            <tr class="top-row">
-              <th
-                scope="col"
-                rowspan="2"
-                class="title-cell text-center title pt-4">
-                  <a :href="dynamicUrl" class="title-url" target="_blank">
-                    {{ title }}
-                  </a>
+        <table class="table table-bordered table-sm">
+          <thead>
+            <tr>
+              <th scope="col" colspan="3" class="title-cell">
+                <a :href="dynamicUrl" class="title-url" target="_blank">
+                  {{ title }}
+                </a>
               </th>
-              <th scope="col" :is="coinSet" class="coin-icons"></th>
-              <th
-                scope="col"
-                class="text-center stat-heading">{{ $t('message.grid.spread_buying') }}</th>
-              <th
-                scope="col"
-                class="text-center stat-heading">{{ $t('message.grid.spread_selling') }}</th>
-              <th
-                scope="col"
-                class="text-center stat-heading">{{ $t('message.grid.fees') }}</th>
-              <th scope="col" rowspan="2" class="button-cell text-center">
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="3" class="coin-icons col-12">
+                <div :is="coinSet" class="coin-icons"></div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">{{ $t('message.grid.spread_buying') }}</td>
+              <td>{{ spread_buying }}</td>
+            </tr>
+            <tr>
+              <td colspan="2">{{ $t('message.grid.spread_selling') }}</td>
+              <td>{{ spread_selling }}</td>
+            </tr>
+            <tr>
+              <td colspan="2">{{ $t('message.grid.fees') }}</td>
+              <td>{{ fees }}</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="button-cell text-center">
                 <p class="mb-2">{{ $t('message.grid.go_to') }} </p>
-                <a class="btn btn-primary"
+                <a class="btn btn-primary btn-sm"
                   :href="dynamicUrl"
                   role="button"
                   target="_blank">
                     {{ title }}
                 </a>
-              </th>
-            </tr>
-            <tr>
-              <td class="coin-text">{{ coins }}</td>
-              <td class="text-center stat">{{ spread_buying }}</td>
-              <td class="text-center stat">{{ spread_selling }}</td>
-              <td class="text-center stat">{{ fees }}</td>
-            </tr>
-            <tr>
-              <td colspan="6" class="p-3">{{ description }}</td>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -108,21 +107,5 @@ export default {
 
 <style scoped lang="scss">
 @import './public/scss/_desktop-card.scss';
-
-.desktop {
-  font-family: 'Poppins', sans-serif;
-}
-
-.active {
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  height: 300px;
-}
-.coin-text {
-  font-weight: light;
-}
 
 </style>

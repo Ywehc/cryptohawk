@@ -1,42 +1,42 @@
 <template>
     <main class="container p-4">
-        <section>
-            <p>{{ $t('message.hardware.intro1') }}</p>
-            <p>{{ $t('message.hardware.intro2') }}</p>
-            <p>{{ $t('message.hardware.intro3') }}</p>
-            <p>{{ $t('message.hardware.intro4') }}</p>
-            <p>{{ $t('message.hardware.intro5') }}</p>
-        </section>
-        <section>
-            <h2><a href="https://shop.trezor.io/product/trezor-model-t?offer_id=15&aff_id=7069">Trezor Model T</a></h2>
-            <div class="img-container">
-                <p>{{ $t('message.hardware.trezor') }}</p>
-                <a href="https://shop.trezor.io/product/trezor-model-t?offer_id=15&aff_id=7069">
-                    <img
-                    src="../../public/assets/trezor_lifestyle.jpg"
-                    alt="trezor lifestyle"
-                    class="img-trezor mx-2">
-                </a>
+        <section class="row">
+            <div class="col-12">
+                <p>{{ $t('message.hardware.intro1') }}</p>
+                <p>{{ $t('message.hardware.intro2') }}</p>
+                <p>{{ $t('message.hardware.intro3') }}</p>
+                <p>{{ $t('message.hardware.intro4') }}</p>
+                <p>{{ $t('message.hardware.intro5') }}</p>
             </div>
-        </section>
-        <section>
-            <h2><a href="https://shop.ledger.com/pages/ledger-nano-x?r=91c03745c56c">Ledger Nano X</a></h2>
-            <div class="img-container">
-                <p>{{ $t('message.hardware.ledger') }}</p>
-                <a href="https://shop.ledger.com/pages/ledger-nano-x?r=91c03745c56c">
-                    <img
-                    src="../../public/assets/nano_x.png"
-                    alt="ledger nano x"
-                    class="img-nano mx-2">
-                </a>
-            </div>
+            <hardware-card
+                title="Trezor Model T"
+                url="https://shop.trezor.io/product/trezor-model-t?offer_id=15&aff_id=7069"
+                img_src="trezor_lifestyle.jpg"
+                alt="trezor lifestyle"
+                :description="$t('message.hardware.trezor')"/>
+            <hardware-card
+                title="Ledger Nano X"
+                url="https://shop.ledger.com/pages/ledger-nano-x?r=91c03745c56c"
+                img_src="nano_x.png"
+                alt="ledger nano x"
+                :description="$t('message.hardware.ledger')"/>
         </section>
     </main>
 </template>
 
+<script>
+import HardwareCard from '../components/HardwareCard.vue';
+
+export default {
+  components: { HardwareCard },
+};
+</script>
+
 <style lang="scss" scoped>
 .container {
     background: $light;
+    display: block;
+    width: 60%;
 }
 h2 {
     font-size: $main-heading-size;
@@ -46,14 +46,5 @@ h2 {
 }
 p {
     font-size: $main-text-size;
-}
-.img-container {
-    display: flex;
-    .img-trezor {
-        height: 80px;
-    }
-    .img-nano {
-        height: 200px;
-    }
 }
 </style>

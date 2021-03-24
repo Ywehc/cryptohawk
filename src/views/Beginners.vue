@@ -44,6 +44,7 @@
 <style lang="scss" scoped>
 .container {
     background: $light;
+    width: 60%;
 }
 h2 {
     font-size: $main-heading-size;

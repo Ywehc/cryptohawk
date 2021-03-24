@@ -24,6 +24,7 @@
     text-align: right;
     display: flex;
     flex-direction: column;
+    margin-top: -6px;
 }
 .link {
     color: $light;
