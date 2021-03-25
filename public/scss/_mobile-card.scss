@@ -36,6 +36,9 @@
     border-right: none!important;
     color: $darkest!important;
   }
+  .tab-content {
+    min-height: 550px;
+  }
   .tab-content-header {
     color: $darkest;
     text-align: center;
@@ -45,7 +48,7 @@
     text-align: center;
   }
   .table {
-    font-size: 12px;
+    font-size: $small-text-size;
   }
   .tab-title {
     font-size: 18px;
@@ -59,9 +62,13 @@
         color: $darkest;
         font-weight: bold;
         border: 2px solid $darkest;
+        padding: 8px;
     }
-    .btn-primary:hover {
-        background-color: $darkest;
-        color: $attention;
-    }
+  .btn-primary:hover {
+      background-color: $darkest;
+      color: $attention;
+  }
+  .card-text p {
+    font-size: $main-text-size;
+  }
 }

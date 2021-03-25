@@ -1,6 +1,6 @@
 <template>
     <div class="sidebar">
-      <p class="text-center p-3 heading">Current prices in $CAD</p>
+      <p class="text-center p-3 heading">{{ $t('message.prices') }} $CAD</p>
       <table class="table table-striped">
         <tbody>
           <PricesRow
@@ -128,7 +128,7 @@ export default {
   color: $darkest;
 }
 .table {
-  font-size: 14px;
+  font-size: $small-text-size;
   font-weight: bold;
 }
 .nomics {

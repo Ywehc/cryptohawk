@@ -2,18 +2,19 @@
     <div class="desktop-grid">
       <h2>{{ $t('message.brand.description') }}</h2>
       <div class="container">
-        <platform-cards class="cards"/>
-        <prices class="sidebar d-none d-lg-block" />
+        <DesktopNav class="nav"/>
+        <router-view class="main" />
+        <Prices class="sidebar d-none d-lg-block" />
       </div>
     </div>
 </template>
 
 <script>
+import DesktopNav from './DesktopNav.vue';
 import Prices from '../views/Prices.vue';
-import PlatformCards from '../views/PlatformCards.vue';
 
 export default {
-  components: { PlatformCards, Prices },
+  components: { Prices, DesktopNav },
 };
 </script>
 
@@ -34,11 +35,14 @@ h2 {
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
-.cards {
-  padding-bottom: 90px;
-  width: 80%;
+.nav {
+  width: 15%;
+}
+.main{
+  padding-bottom: 40px;
+  width: 65%;
 }
 .sidebar {
-  width: 24%;
+  width: 20%;
 }
 </style>
