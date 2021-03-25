@@ -9,12 +9,14 @@
                 <p>{{ $t('message.hardware.intro5') }}</p>
             </div>
             <hardware-card
+                class="col-lg-6"
                 title="Trezor Model T"
                 url="https://shop.trezor.io/product/trezor-model-t?offer_id=15&aff_id=7069"
                 img_src="trezor_lifestyle.jpg"
                 alt="trezor lifestyle"
                 :description="$t('message.hardware.trezor')"/>
             <hardware-card
+                class="col-lg-6"
                 title="Ledger Nano X"
                 url="https://shop.ledger.com/pages/ledger-nano-x?r=91c03745c56c"
                 img_src="nano_x.png"

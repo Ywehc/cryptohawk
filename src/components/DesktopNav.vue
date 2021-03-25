@@ -38,7 +38,7 @@
     font-family: $brand-font;
     font-weight: 200;
     letter-spacing: $brand-letter-spacing;
-    font-size: 30px;
+    font-size: 24px;
 }
 .router-link-active {
     color: $lightest;

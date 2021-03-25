@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-      <div class="desktop d-none d-lg-block">
         <table class="table table-bordered table-sm">
           <thead>
             <tr>
@@ -35,7 +34,6 @@
             </tr>
           </tbody>
         </table>
-      </div>
     </div>
 </template>
 
@@ -46,9 +44,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.container {
-  max-width: 50%;
-}
 .table {
   height: 450px;
 }
