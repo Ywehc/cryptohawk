@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <div class="desktop d-none d-lg-block">
+      <div class="desktop">
         <table class="table table-bordered table-sm">
           <thead>
             <tr>

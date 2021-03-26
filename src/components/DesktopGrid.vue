@@ -1,10 +1,10 @@
 <template>
     <div class="desktop-grid">
       <h2>{{ $t('message.brand.description') }}</h2>
-      <div class="container">
-        <DesktopNav class="nav"/>
-        <router-view class="main" />
-        <Prices class="sidebar d-none d-lg-block" />
+      <div class="row container">
+        <DesktopNav class="col-lg-2 nav"/>
+        <router-view class="col-lg-7 main" />
+        <Prices class="col-lg-3 sidebar d-none d-lg-block" />
       </div>
     </div>
 </template>
@@ -21,8 +21,7 @@ export default {
 <style scoped lang="scss">
 .container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  margin: 0px auto;
 }
 .desktop-grid {
   padding-top: 40px;
@@ -36,13 +35,6 @@ h2 {
   font-family: 'Poppins', sans-serif;
 }
 .nav {
-  width: 15%;
-}
-.main{
-  padding-bottom: 40px;
-  width: 65%;
-}
-.sidebar {
-  width: 20%;
+  padding-right: 0;
 }
 </style>

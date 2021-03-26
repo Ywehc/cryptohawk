@@ -1,7 +1,8 @@
 <template>
-    <main class="container p-4">
-        <section class="row">
-            <div class="col-12">
+    <main class="lg-px-4">
+        <section class="p-4">
+            <div class="row">
+                <div class="col-12">
                 <p>{{ $t('message.hardware.intro1') }}</p>
                 <p>{{ $t('message.hardware.intro2') }}</p>
                 <p>{{ $t('message.hardware.intro3') }}</p>
@@ -22,6 +23,7 @@
                 img_src="nano_x.png"
                 alt="ledger nano x"
                 :description="$t('message.hardware.ledger')"/>
+            </div>
         </section>
     </main>
 </template>
@@ -36,8 +38,10 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-    background: $light;
     display: block;
+}
+section {
+    background: $light;
 }
 h2 {
     font-size: $main-heading-size;
@@ -48,9 +52,5 @@ h2 {
 p {
     font-size: $main-text-size;
 }
-@media only screen and (min-width: 992px) {
-  .container {
-      width: 60%;
-  }
-}
+
 </style>

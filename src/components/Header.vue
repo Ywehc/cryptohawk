@@ -34,8 +34,9 @@
   text-decoration: none;
   color: $light;
 }
-.brand-text :hover {
-  color: $light;
+.brand-text:hover{
+  color: $lightest;
+  text-decoration: none;
 }
 @media only screen and (min-width: 576px) {
   .brand-text {

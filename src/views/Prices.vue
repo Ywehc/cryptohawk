@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar">
-      <div v-if="apiDataReturned === false" class="api-loading">
-        <h1>API is LOADING</h1>
+      <div v-if="loading" class="api-loading">
+        <p>Updating prices...</p>
       </div>
       <div v-else class="api-loaded">
         <p class="text-center p-3 heading">{{ $t('message.prices') }} $CAD</p>
@@ -113,17 +113,18 @@ export default {
     return {
       currencies: [],
       // change apiDataReturned to false to test loader
-      apiDataReturned: true,
+      loading: false,
     };
   },
   mounted() {
+    this.loading = true;
     axios
       .get(`https://api.nomics.com/v1/currencies/ticker?key=${process.env.VUE_APP_NOMICS}&ids=BTC,ETH,XRP,ADA,USDT,BNB,DOT,LTC,LINK,USDC,XLM,BCH,UNI,DOGE&interval=1d,30d&convert=CAD&per-page=100&page=1`)
       // eslint-disable-next-line no-return-assign
       .then((response) => this.currencies = response)
       .catch((error) => { console.log(error.response); })
-      .then(this.apiDataReturned === true)
-      .finally(console.log(this.apiDataReturned)); // why would this return false?
+      // eslint-disable-next-line no-return-assign
+      .finally(() => (this.loading = false));
   },
 };
 </script>
@@ -146,6 +147,17 @@ export default {
   a {
     text-decoration: none;
     color: $dark;
+  }
+}
+.api-loading p {
+  margin-top: 14em;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+@media only screen and (min-width: 992px) {
+  .sidebar {
+    max-width: 250px;
   }
 }
 </style>
