@@ -85,8 +85,8 @@
         </b-card>
       </div>
 
-      <div class="d-none d-lg-block container">
-        <div class="container">
+      <div class="d-none d-lg-flex container px-0">
+        <div>
           <div class="row">
             <desktop-card
               class="col"

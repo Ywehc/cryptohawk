@@ -1,6 +1,6 @@
 <template>
-    <main class="container p-4">
-        <section>
+    <main class="lg-px-4">
+        <section class="p-4">
             <h2>{{ $t('message.beginners.heading1') }}</h2>
             <article>
                 <p>{{ $t('message.beginners.intro1') }}</p>
@@ -42,7 +42,7 @@
 </template>
 
 <style lang="scss" scoped>
-.container {
+section {
     background: $light;
 }
 h2 {
@@ -53,10 +53,5 @@ a {
 }
 p {
     font-size: $main-text-size;
-}
-@media only screen and (min-width: 992px) {
-  .container {
-      width: 60%;
-  }
 }
 </style>

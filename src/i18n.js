@@ -67,7 +67,7 @@ const messages = {
       contact: {
         header: 'How can we help you today?',
         email: 'Your email:',
-        message: 'Your message',
+        message: 'Your message:',
         send: 'Send',
       },
       nomics: 'Crypto Market Cap & Pricing Data Provided By Nomics.',
@@ -161,8 +161,8 @@ const messages = {
       },
       contact: {
         header: `Que peut-on faire pour vous aider aujourd'hui?`,
-        email: 'Votre email',
-        message: 'Votre message',
+        email: 'Votre email:',
+        message: 'Votre message:',
         send: 'Envoyer',
       },
       nomics: 'Données de capitalisation boursière et de prix des crypto-monnaies fournies par Nomics.',
