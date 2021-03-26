@@ -1,6 +1,10 @@
 <template>
     <div class="sidebar">
-      <p class="text-center p-3 heading">{{ $t('message.prices') }} $CAD</p>
+      <div v-if="apiDataReturned === false" class="api-loading">
+        <h1>API is LOADING</h1>
+      </div>
+      <div v-else class="api-loaded">
+        <p class="text-center p-3 heading">{{ $t('message.prices') }} $CAD</p>
       <table class="table table-striped">
         <tbody>
           <PricesRow
@@ -95,6 +99,7 @@
       <p class="nomics text-center">
         <a href="https://nomics.com">{{ $t('message.nomics') }}</a>
       </p>
+      </div>
     </div>
 </template>
 
@@ -107,6 +112,8 @@ export default {
   data() {
     return {
       currencies: [],
+      // change apiDataReturned to false to test loader
+      apiDataReturned: true,
     };
   },
   mounted() {
@@ -114,7 +121,9 @@ export default {
       .get(`https://api.nomics.com/v1/currencies/ticker?key=${process.env.VUE_APP_NOMICS}&ids=BTC,ETH,XRP,ADA,USDT,BNB,DOT,LTC,LINK,USDC,XLM,BCH,UNI,DOGE&interval=1d,30d&convert=CAD&per-page=100&page=1`)
       // eslint-disable-next-line no-return-assign
       .then((response) => this.currencies = response)
-      .catch((error) => { console.log(error.response); });
+      .catch((error) => { console.log(error.response); })
+      .then(this.apiDataReturned === true)
+      .finally(console.log(this.apiDataReturned)); // why would this return false?
   },
 };
 </script>
