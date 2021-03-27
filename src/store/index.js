@@ -6,12 +6,26 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     platforms: {
+      coinbase: {
+        url: 'https://www.coinbase.com/join/kieran_tx',
+        title: 'Coinbase',
+        spread_buying: '.5% to 1%',
+        spread_selling: '.5% to 1%',
+        fees: '$0.99 to $2.99',
+      },
       coinsmart: {
         url: 'https://crypto.coinsmart.com/register?promo=Ref-r5JA0V',
         title: 'Coinsmart',
         spread_buying: '1.39%',
         spread_selling: '2.4%',
         fees: '0.2% / 2%',
+      },
+      mybtc: {
+        url: 'https://mybtc.ca?ref=AkePajV1zOmy8d60KR4L',
+        title: 'MyBTC',
+        spread_buying: 'free to $2.50',
+        spread_selling: '4.95%',
+        fees: 'Funding + withdrawal',
       },
       ndax: {
         url: 'https://one.ndax.io/bfQjUd',

@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar">
       <div v-if="loading" class="api-loading">
-        <p>Updating prices...</p>
+        <p>{{ $t('message.ui.loading_prices') }}</p>
       </div>
       <div v-else class="api-loaded">
         <p class="text-center p-3 heading">{{ $t('message.prices') }} $CAD</p>
@@ -96,7 +96,7 @@
           />
         </tbody>
       </table>
-      <p class="nomics text-center">
+      <p class="nomics text-center mx-3">
         <a href="https://nomics.com">{{ $t('message.nomics') }}</a>
       </p>
       </div>
@@ -112,7 +112,6 @@ export default {
   data() {
     return {
       currencies: [],
-      // change apiDataReturned to false to test loader
       loading: false,
     };
   },
@@ -132,6 +131,7 @@ export default {
 <style scoped lang="scss">
 .sidebar {
     background-color: $light;
+    padding: 0;
 }
 .heading {
   font-weight: bold;
@@ -150,14 +150,17 @@ export default {
   }
 }
 .api-loading p {
-  margin-top: 14em;
+  margin-top: 6em;
   font-weight: bold;
   font-size: 20px;
   text-align: center;
 }
 @media only screen and (min-width: 992px) {
   .sidebar {
-    max-width: 250px;
+    max-width: 270px;
+  }
+  .api-loading p {
+    margin-top: 14em;
   }
 }
 </style>

@@ -3,6 +3,19 @@
       <div class="mobile-container d-sm-flex d-lg-none">
         <b-card no-body class="mobile">
           <b-tabs vertical>
+            <b-tab class="platform-tab" :title="this.$store.state.platforms.coinbase.title">
+              <b-card-text>
+                <mobile-card
+                  :title="this.$store.state.platforms.coinbase.title"
+                  :description="this.$t('message.grid.coinbase.description')"
+                  :spread_buying="this.$store.state.platforms.coinbase.spread_buying"
+                  :spread_selling="this.$store.state.platforms.coinbase.spread_selling"
+                  :fees="this.$store.state.platforms.coinbase.fees"
+                  :referral="coinbaseReferral"
+                  :coins="this.$t('message.grid.coinbase.coins')">
+                </mobile-card>
+              </b-card-text>
+            </b-tab>
             <b-tab class="platform-tab" :title="this.$store.state.platforms.coinsmart.title">
               <b-card-text>
                 <mobile-card
@@ -13,6 +26,19 @@
                   :fees="this.$store.state.platforms.coinsmart.fees"
                   :referral="coinsmartReferral"
                   :coins="this.$t('message.grid.coinsmart.coins')">
+                </mobile-card>
+              </b-card-text>
+            </b-tab>
+            <b-tab class="platform-tab" :title="this.$store.state.platforms.mybtc.title">
+              <b-card-text>
+                <mobile-card
+                  :title="this.$store.state.platforms.mybtc.title"
+                  :description="this.$t('message.grid.mybtc.description')"
+                  :spread_buying="this.$store.state.platforms.mybtc.spread_buying"
+                  :spread_selling="this.$store.state.platforms.mybtc.spread_selling"
+                  :fees="this.$store.state.platforms.mybtc.fees"
+                  :referral="myBtcReferral"
+                  :coins="this.$t('message.grid.mybtc.coins')">
                 </mobile-card>
               </b-card-text>
             </b-tab>
@@ -86,8 +112,18 @@
       </div>
 
       <div class="d-none d-lg-flex container px-0">
-        <div>
+        <div class="mx-3">
           <div class="row">
+            <desktop-card
+              class="col"
+              :title="this.$store.state.platforms.coinbase.title"
+              :description="this.$t('message.grid.coinbase.description')"
+              :spread_buying="this.$store.state.platforms.coinbase.spread_buying"
+              :spread_selling="this.$store.state.platforms.coinbase.spread_selling"
+              :fees="this.$store.state.platforms.coinbase.fees"
+              :referral="coinbaseReferral"
+              :coins="this.$t('message.grid.coinbase.coins')">
+            </desktop-card>
             <desktop-card
               class="col"
               :title="this.$store.state.platforms.coinsmart.title"
@@ -97,6 +133,17 @@
               :fees="this.$store.state.platforms.coinsmart.fees"
               :referral="coinsmartReferral"
               :coins="this.$t('message.grid.coinsmart.coins')">
+            </desktop-card>
+            <div class="w-100"></div>
+            <desktop-card
+              class="col"
+              :title="this.$store.state.platforms.mybtc.title"
+              :description="this.$t('message.grid.mybtc.description')"
+              :spread_buying="this.$store.state.platforms.mybtc.spread_buying"
+              :spread_selling="this.$store.state.platforms.mybtc.spread_selling"
+              :fees="this.$store.state.platforms.mybtc.fees"
+              :referral="myBtcReferral"
+              :coins="this.$t('message.grid.mybtc.coins')">
             </desktop-card>
             <desktop-card
               class="col"
@@ -165,6 +212,11 @@ export default {
     DesktopCard,
     MobileCard,
   },
+  data() {
+    return {
+      myBtcReferral: '$20',
+    };
+  },
   computed: {
     newtonReferral() {
       return (`$25 ${this.$t('message.grid.to_each_party')}`);
@@ -186,6 +238,9 @@ export default {
     },
     wealthsimpleFees() {
       return (`3% ${this.$t('message.grid.operations_fee')}`);
+    },
+    coinbaseReferral() {
+      return (`$12.61 ${this.$t('message.grid.to_each_party')}`);
     },
   },
 };

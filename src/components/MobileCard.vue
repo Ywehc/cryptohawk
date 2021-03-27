@@ -45,6 +45,7 @@ import CoinsmartCoins from './coin_icons/CoinsmartCoins.vue';
 import NetcoinsCoins from './coin_icons/NetcoinsCoins.vue';
 import NdaxCoins from './coin_icons/NdaxCoins.vue';
 import WealthsimpleCoins from './coin_icons/WealthsimpleCoins.vue';
+import MyBtcCoins from './coin_icons/MyBtcCoins.vue';
 
 export default {
   props: ['referral', 'title', 'spread_buying', 'spread_selling', 'fees', 'description'],
@@ -63,6 +64,8 @@ export default {
           return NdaxCoins;
         case 'Wealthsimple':
           return WealthsimpleCoins;
+        case 'MyBTC':
+          return MyBtcCoins;
         default: return null;
       }
     },
