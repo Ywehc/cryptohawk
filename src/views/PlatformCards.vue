@@ -12,7 +12,9 @@
                   :spread_selling="this.$store.state.platforms.coinbase.spread_selling"
                   :fees="this.$store.state.platforms.coinbase.fees"
                   :referral="coinbaseReferral"
-                  :coins="this.$t('message.grid.coinbase.coins')">
+                  :coins="this.$t('message.grid.coinbase.coins')"
+                  :established="this.$t('message.grid.coinbase.established')"
+                  :operated_from="this.$t('message.grid.coinbase.operated_from')">
                 </mobile-card>
               </b-card-text>
             </b-tab>
@@ -25,7 +27,9 @@
                   :spread_selling="this.$store.state.platforms.coinsmart.spread_selling"
                   :fees="this.$store.state.platforms.coinsmart.fees"
                   :referral="coinsmartReferral"
-                  :coins="this.$t('message.grid.coinsmart.coins')">
+                  :coins="this.$t('message.grid.coinsmart.coins')"
+                  :established="this.$t('message.grid.coinsmart.established')"
+                  :operated_from="this.$t('message.grid.coinsmart.operated_from')">
                 </mobile-card>
               </b-card-text>
             </b-tab>
@@ -38,7 +42,9 @@
                   :spread_selling="this.$store.state.platforms.mybtc.spread_selling"
                   :fees="this.$store.state.platforms.mybtc.fees"
                   :referral="myBtcReferral"
-                  :coins="this.$t('message.grid.mybtc.coins')">
+                  :coins="this.$t('message.grid.mybtc.coins')"
+                  :established="this.$t('message.grid.mybtc.established')"
+                  :operated_from="this.$t('message.grid.mybtc.operated_from')">
                 </mobile-card>
               </b-card-text>
             </b-tab>
@@ -51,7 +57,9 @@
                   :spread_selling="this.$store.state.platforms.ndax.spread_selling"
                   :fees="this.$store.state.platforms.ndax.fees"
                   :referral="ndaxReferral"
-                  :coins="this.$t('message.grid.ndax.coins')">
+                  :coins="this.$t('message.grid.ndax.coins')"
+                  :established="this.$t('message.grid.ndax.established')"
+                  :operated_from="this.$t('message.grid.ndax.operated_from')">
                 </mobile-card>
               </b-card-text>
             </b-tab>
@@ -64,7 +72,9 @@
                   :spread_selling="this.$store.state.platforms.netcoins.spread_selling"
                   :fees="this.$store.state.platforms.netcoins.fees"
                   :referral="netcoinsReferral"
-                  :coins="this.$t('message.grid.netcoins.coins')">
+                  :coins="this.$t('message.grid.netcoins.coins')"
+                  :established="this.$t('message.grid.netcoins.established')"
+                  :operated_from="this.$t('message.grid.netcoins.operated_from')">
                 </mobile-card>
               </b-card-text>
             </b-tab>
@@ -77,7 +87,9 @@
                   :spread_selling="this.$store.state.platforms.newton.spread_selling"
                   :fees="this.$store.state.platforms.newton.fees"
                   :referral="newtonReferral"
-                  :coins="this.$t('message.grid.newton.coins')">
+                  :coins="this.$t('message.grid.newton.coins')"
+                  :established="this.$t('message.grid.newton.established')"
+                  :operated_from="this.$t('message.grid.newton.operated_from')">
                 </mobile-card>
               </b-card-text>
             </b-tab>
@@ -90,7 +102,9 @@
                   :spread_selling="this.$store.state.platforms.shakepay.spread_selling"
                   :fees="this.$store.state.platforms.shakepay.fees"
                   :referral="shakepayReferral"
-                  :coins="this.$t('message.grid.shakepay.coins')">
+                  :coins="this.$t('message.grid.shakepay.coins')"
+                  :established="this.$t('message.grid.shakepay.established')"
+                  :operated_from="this.$t('message.grid.shakepay.operated_from')">
                 </mobile-card>
               </b-card-text>
             </b-tab>
@@ -103,7 +117,9 @@
                   :spread_selling="this.$store.state.platforms.wealthsimple.spread_selling"
                   :fees="wealthsimpleFees"
                   :referral="wealthsimpleReferral"
-                  :coins="this.$t('message.grid.wealthsimple.coins')">
+                  :coins="this.$t('message.grid.wealthsimple.coins')"
+                  :established="this.$t('message.grid.wealthsimple.established')"
+                  :operated_from="this.$t('message.grid.wealthsimple.operated_from')">
                 </mobile-card>
               </b-card-text>
             </b-tab>
@@ -122,7 +138,9 @@
               :spread_selling="this.$store.state.platforms.coinbase.spread_selling"
               :fees="this.$store.state.platforms.coinbase.fees"
               :referral="coinbaseReferral"
-              :coins="this.$t('message.grid.coinbase.coins')">
+              :coins="this.$t('message.grid.coinbase.coins')"
+              :established="this.$t('message.grid.coinbase.established')"
+              :operated_from="this.$t('message.grid.coinbase.operated_from')">
             </desktop-card>
             <desktop-card
               class="col"
@@ -132,7 +150,9 @@
               :spread_selling="this.$store.state.platforms.coinsmart.spread_selling"
               :fees="this.$store.state.platforms.coinsmart.fees"
               :referral="coinsmartReferral"
-              :coins="this.$t('message.grid.coinsmart.coins')">
+              :coins="this.$t('message.grid.coinsmart.coins')"
+              :established="this.$t('message.grid.coinsmart.established')"
+              :operated_from="this.$t('message.grid.coinsmart.operated_from')">
             </desktop-card>
             <div class="w-100"></div>
             <desktop-card
@@ -143,7 +163,9 @@
               :spread_selling="this.$store.state.platforms.mybtc.spread_selling"
               :fees="this.$store.state.platforms.mybtc.fees"
               :referral="myBtcReferral"
-              :coins="this.$t('message.grid.mybtc.coins')">
+              :coins="this.$t('message.grid.mybtc.coins')"
+              :established="this.$t('message.grid.mybtc.established')"
+              :operated_from="this.$t('message.grid.mybtc.operated_from')">
             </desktop-card>
             <desktop-card
               class="col"
@@ -153,7 +175,9 @@
               :spread_selling="this.$store.state.platforms.ndax.spread_selling"
               :fees="this.$store.state.platforms.ndax.fees"
               :referral="ndaxReferral"
-              :coins="this.$t('message.grid.ndax.coins')">
+              :coins="this.$t('message.grid.ndax.coins')"
+              :established="this.$t('message.grid.ndax.established')"
+              :operated_from="this.$t('message.grid.ndax.operated_from')">
             </desktop-card>
             <div class="w-100"></div>
             <desktop-card
@@ -164,7 +188,9 @@
               :spread_selling="this.$store.state.platforms.netcoins.spread_selling"
               :fees="this.$store.state.platforms.netcoins.fees"
               :referral="netcoinsReferral"
-              :coins="this.$t('message.grid.netcoins.coins')">
+              :coins="this.$t('message.grid.netcoins.coins')"
+              :established="this.$t('message.grid.netcoins.established')"
+              :operated_from="this.$t('message.grid.netcoins.operated_from')">
             </desktop-card>
             <desktop-card
               class="col"
@@ -174,7 +200,9 @@
               :spread_selling="this.$store.state.platforms.newton.spread_selling"
               :fees="this.$store.state.platforms.newton.fees"
               :referral="newtonReferral"
-              :coins="this.$t('message.grid.newton.coins')">
+              :coins="this.$t('message.grid.newton.coins')"
+              :established="this.$t('message.grid.newton.established')"
+              :operated_from="this.$t('message.grid.newton.operated_from')">
             </desktop-card>
             <div class="w-100"></div>
             <desktop-card
@@ -185,7 +213,9 @@
               :spread_selling="this.$store.state.platforms.shakepay.spread_selling"
               :fees="this.$store.state.platforms.shakepay.fees"
               :referral="shakepayReferral"
-              :coins="this.$t('message.grid.shakepay.coins')">
+              :coins="this.$t('message.grid.shakepay.coins')"
+              :established="this.$t('message.grid.shakepay.established')"
+              :operated_from="this.$t('message.grid.shakepay.operated_from')">
             </desktop-card>
             <desktop-card
               class="col"
@@ -195,7 +225,9 @@
               :spread_selling="this.$store.state.platforms.wealthsimple.spread_selling"
               :fees="wealthsimpleFees"
               :referral="wealthsimpleReferral"
-              :coins="this.$t('message.grid.wealthsimple.coins')">
+              :coins="this.$t('message.grid.wealthsimple.coins')"
+              :established="this.$t('message.grid.wealthsimple.established')"
+              :operated_from="this.$t('message.grid.wealthsimple.operated_from')">
             </desktop-card>
           </div>
         </div>
