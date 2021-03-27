@@ -1,5 +1,8 @@
 
 .desktop {
+    .table {
+        min-height: 360px;
+    }
     tr {
         border-color: $medium;
         background-color: $lightest;

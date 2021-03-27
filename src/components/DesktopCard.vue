@@ -30,6 +30,10 @@
               <td>{{ fees }}</td>
             </tr>
             <tr>
+              <td colspan="2">{{ $t('message.grid.referrals') }}</td>
+              <td>{{ referral }}</td>
+            </tr>
+            <tr>
               <td colspan="3" class="button-cell text-center">
                 <p class="mb-2">{{ $t('message.grid.go_to') }} </p>
                 <a class="btn btn-primary btn-sm"
@@ -53,6 +57,8 @@ import CoinsmartCoins from './coin_icons/CoinsmartCoins.vue';
 import NetcoinsCoins from './coin_icons/NetcoinsCoins.vue';
 import NdaxCoins from './coin_icons/NdaxCoins.vue';
 import WealthsimpleCoins from './coin_icons/WealthsimpleCoins.vue';
+import MyBtcCoins from './coin_icons/MyBtcCoins.vue';
+import CoinbaseCoins from './coin_icons/CoinbaseCoins.vue';
 
 export default {
   data() {
@@ -81,6 +87,10 @@ export default {
           return NdaxCoins;
         case 'Wealthsimple':
           return WealthsimpleCoins;
+        case 'MyBTC':
+          return MyBtcCoins;
+        case 'Coinbase':
+          return CoinbaseCoins;
         default: return null;
       }
     },
@@ -98,6 +108,10 @@ export default {
           return this.$store.state.platforms.netcoins.url;
         case 'NDAX':
           return this.$store.state.platforms.ndax.url;
+        case 'MyBtc':
+          return this.$store.state.platforms.mybtc.title;
+        case 'Coinbase':
+          return this.$store.state.platforms.coinbase.url;
         default: return null;
       }
     },

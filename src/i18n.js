@@ -50,6 +50,16 @@ const messages = {
           description: 'NDAX is a full-featured Canadian exchange with a deep set of trading tools and a transparent fee structure. They are registered under FINTRAC and would be our recommendation for a serious trader.',
           coins: 'Bitcoin, Ethereum, Cardano, Litecoin, Ripple, Dot, Tether, Stellar, Link, EOS',
         },
+        mybtc: {
+          title: "myBTC",
+          description: "",
+          coins: "",
+        },
+        coinbase: {
+          title: "Coinbase",
+          description: "",
+          coins: "",
+        },
         coins: 'Available Coins',
         spread: 'Cost to Buy/Sell',
         spread_buying: 'Cost to Buy',
@@ -72,7 +82,7 @@ const messages = {
       },
       nomics: 'Crypto Market Cap & Pricing Data Provided By Nomics.',
       ui: {
-        loading_prices: 'loading prices...',
+        loading_prices: 'Updating prices...',
       },
       prices: "Current prices in ",
       beginners: {
@@ -144,6 +154,16 @@ const messages = {
           title: "NDAX",
           description: `NDAX est une bourse canadienne complète avec un ensemble complet d'outils de négociation et une structure de frais transparente. Ils sont enregistrés sous CANAFE et seraient notre recommandation pour un commerçant sérieux.`,
           coins: 'Bitcoin, Ethereum, Cardano, Litecoin, Ripple, Dot, Tether, Stellar, Link, EOS',
+        },
+        mybtc: {
+          title: "myBTC",
+          description: "",
+          coins: "",
+        },
+        coinbase: {
+          title: "Coinbase",
+          description: "",
+          coins: "",
         },
         coins: 'Pièces disponibles',
         spread: `Coût d'achat/de vente`,

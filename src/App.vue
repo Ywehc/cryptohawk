@@ -26,5 +26,6 @@ export default {
 <style lang="scss">
 #app {
   background: $darkest;
+  min-height: 100vh;
 }
 </style>
