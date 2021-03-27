@@ -34,6 +34,14 @@
               <td>{{ referral }}</td>
             </tr>
             <tr>
+              <td colspan="2">{{ $t('message.grid.established') }}</td>
+              <td>{{ established }}</td>
+            </tr>
+            <tr>
+              <td colspan="2">{{ $t('message.grid.operated_from') }}</td>
+              <td>{{ operated_from }}</td>
+            </tr>
+            <tr>
               <td colspan="3" class="button-cell text-center">
                 <p class="mb-2">{{ $t('message.grid.go_to') }} </p>
                 <a class="btn btn-primary btn-sm"
@@ -71,7 +79,7 @@ export default {
       this.isActive = !this.isActive;
     },
   },
-  props: ['title', 'description', 'spread', 'fees', 'referral', 'spread_buying', 'spread_selling', 'coins', 'image_coins', 'coin_ownership'],
+  props: ['title', 'description', 'spread', 'fees', 'referral', 'spread_buying', 'spread_selling', 'coins', 'image_coins', 'coin_ownership', 'established', 'operated_from'],
   computed: {
     coinSet() {
       switch (this.title) {
@@ -109,7 +117,7 @@ export default {
         case 'NDAX':
           return this.$store.state.platforms.ndax.url;
         case 'MyBtc':
-          return this.$store.state.platforms.mybtc.title;
+          return this.$store.state.platforms.mybtc.url;
         case 'Coinbase':
           return this.$store.state.platforms.coinbase.url;
         default: return null;

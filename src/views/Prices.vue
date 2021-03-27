@@ -94,6 +94,104 @@
             :price="Math.round((currencies.data &&
               currencies.data[13] || {}).price * 100) / 100"
           />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[14]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[14] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[14] || {}).price * 100) / 100"
+          />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[15]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[15] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[15] || {}).price * 100) / 100"
+          />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[16]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[16] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[16] || {}).price * 100) / 100"
+          />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[17]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[17] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[17] || {}).price * 100) / 100"
+          />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[18]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[18] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[18] || {}).price * 100) / 100"
+          />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[19]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[19] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[19] || {}).price * 100) / 100"
+          />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[20]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[20] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[20] || {}).price * 100) / 100"
+          />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[21]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[21] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[21] || {}).price * 100) / 100"
+          />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[22]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[22] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[22] || {}).price * 100) / 100"
+          />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[23]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[23] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[23] || {}).price * 100) / 100"
+          />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[24]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[24] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[24] || {}).price * 100) / 100"
+          />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[25]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[25] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[25] || {}).price * 100) / 100"
+          />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[26]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[26] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[26] || {}).price * 100) / 100"
+          />
+
+          <PricesRow
+            :img_url="((this.currencies.data && this.currencies.data[27]) || {}).logo_url"
+            :name="(currencies.data && currencies.data[27] || {}).name"
+            :price="Math.round((currencies.data &&
+              currencies.data[27] || {}).price * 100) / 100"
+          />
         </tbody>
       </table>
       <p class="nomics text-center mx-3">
@@ -118,7 +216,7 @@ export default {
   mounted() {
     this.loading = true;
     axios
-      .get(`https://api.nomics.com/v1/currencies/ticker?key=${process.env.VUE_APP_NOMICS}&ids=BTC,ETH,XRP,ADA,USDT,BNB,DOT,LTC,LINK,USDC,XLM,BCH,UNI,DOGE&interval=1d,30d&convert=CAD&per-page=100&page=1`)
+      .get(`https://api.nomics.com/v1/currencies/ticker?key=${process.env.VUE_APP_NOMICS}&ids=BTC,ETH,XRP,ADA,USDT,BNB,DOT,LTC,LINK,USDC,XLM,BCH,UNI,DOGE,THETA,HEX,FIL,WBTC,LUNA,ALGO,VET,CRO,TRX,FTT,ATOM,AAVE,SOL,KSM&interval=1d,30d&convert=CAD&per-page=100&page=1`)
       // eslint-disable-next-line no-return-assign
       .then((response) => this.currencies = response)
       .catch((error) => { console.log(error.response); })

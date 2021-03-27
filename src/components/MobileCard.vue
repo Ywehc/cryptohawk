@@ -24,9 +24,16 @@
                     <th scope="row">{{ this.$t('message.grid.referrals') }}</th>
                     <td>{{ referral }}</td>
                 </tr>
+                <tr>
+                  <th scope="row">{{ this.$t('message.grid.established') }}</th>
+                  <td>{{ established }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{ this.$t('message.grid.operated_from') }}</th>
+                  <td>{{ operated_from }}</td>
+                </tr>
                 </tbody>
             </table>
-            <p class="px-3">{{ description }}</p>
             <p class="font-weight-bold text-center">{{ $t('message.grid.go_to') }}
               <a class="btn btn-primary"
                 :href="dynamicUrl"
@@ -46,9 +53,10 @@ import NetcoinsCoins from './coin_icons/NetcoinsCoins.vue';
 import NdaxCoins from './coin_icons/NdaxCoins.vue';
 import WealthsimpleCoins from './coin_icons/WealthsimpleCoins.vue';
 import MyBtcCoins from './coin_icons/MyBtcCoins.vue';
+import CoinbaseIcons from './coin_icons/CoinbaseCoins.vue';
 
 export default {
-  props: ['referral', 'title', 'spread_buying', 'spread_selling', 'fees', 'description'],
+  props: ['referral', 'title', 'spread_buying', 'spread_selling', 'fees', 'description', 'established', 'operated_from'],
   computed: {
     coinIcons() {
       switch (this.title) {
@@ -66,6 +74,8 @@ export default {
           return WealthsimpleCoins;
         case 'MyBTC':
           return MyBtcCoins;
+        case 'Coinbase':
+          return CoinbaseIcons;
         default: return null;
       }
     },
@@ -83,6 +93,10 @@ export default {
           return this.$store.state.platforms.netcoins.url;
         case 'NDAX':
           return this.$store.state.platforms.ndax.url;
+        case 'MyBtc':
+          return this.$store.state.platforms.mybtc.url;
+        case 'Coinbase':
+          return this.$store.state.platforms.coinbase.url;
         default: return null;
       }
     },
