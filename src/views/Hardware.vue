@@ -33,6 +33,9 @@ import HardwareCard from '../components/HardwareCard.vue';
 
 export default {
   components: { HardwareCard },
+  metaInfo: {
+    title: 'Compare cold storage devices from brands like Ledger and Trezor to optimally protect your cryptocurrency hardware wallet',
+  },
 };
 </script>
 

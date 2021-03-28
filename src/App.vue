@@ -14,6 +14,11 @@ import MobileGrid from './components/MobileGrid.vue';
 import DesktopGrid from './components/DesktopGrid.vue';
 
 export default {
+  name: 'App',
+  metaInfo: {
+    title: 'Cryptocurrency platform and price information for Canadian investors and traders.',
+    titleTemplate: '%s | Cryptohawk.ca',
+  },
   components: {
     Header,
     Footer,

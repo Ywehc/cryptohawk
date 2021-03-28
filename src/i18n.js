@@ -89,7 +89,7 @@ const messages = {
         operations_fee: 'Operations Fee',
         go_to: 'Go to',
         to_new_user: 'to new user',
-        established: 'Year Established',
+        established: 'Established',
         operated_from: 'Operated From',
       },
       contact: {
