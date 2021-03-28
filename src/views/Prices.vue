@@ -228,8 +228,8 @@ export default {
 
 <style scoped lang="scss">
 .sidebar {
-    background-color: $light;
-    padding: 0;
+  background-color: $light;
+  padding: 0;
 }
 .heading {
   font-weight: bold;

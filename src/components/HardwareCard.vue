@@ -81,6 +81,7 @@ img {
     background: linear-gradient(to left, $medium, $dark);
     padding: 8px;
     font-size: 16px;
+    border-color: $dark;
 }
 
 </style>

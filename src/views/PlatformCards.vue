@@ -127,8 +127,8 @@
         </b-card>
       </div>
 
-      <div class="d-none d-lg-flex container px-0">
-        <div class="mx-3">
+      <div class="d-none d-lg-flex container-fluid px-0">
+        <div class="container px-2">
           <div class="row">
             <desktop-card
               class="col"

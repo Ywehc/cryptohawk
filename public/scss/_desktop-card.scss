@@ -1,16 +1,18 @@
 
 .desktop {
     .table {
-        min-height: 420px;
+        min-height: 460px;
     }
     tr {
         border-color: $medium;
         background-color: $lightest;
     }
     td {
-        padding: 8px;
-        font-weight: bold;
+        padding: 10px;
         font-size: 14px;
+    }
+    tbody {
+        font-family: $brand-font;
     }
     .btn-primary {
         background-color: $attention;
@@ -38,5 +40,6 @@
         background: linear-gradient(to left, $medium, $dark);
         padding: 8px;
         font-size: 16px;
+        border-color: $darkest;
     }
 }

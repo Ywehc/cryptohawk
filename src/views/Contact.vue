@@ -21,6 +21,14 @@
   </div>
 </template>
 
+<script>
+export default {
+  metaInfo: {
+    title: 'Contact Cryptohawk.ca',
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 .container-fluid {
   background-color: $dark;

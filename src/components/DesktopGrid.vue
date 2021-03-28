@@ -1,10 +1,10 @@
 <template>
     <div class="desktop-grid">
       <h2>{{ $t('message.brand.description') }}</h2>
-      <div class="row container">
+      <div class="row container px-0">
         <DesktopNav class="col-lg-2 nav"/>
         <router-view class="col-lg-7 main" />
-        <Prices class="col-lg-3 sidebar d-none d-lg-block" />
+        <Prices class="col-lg-2 sidebar d-none d-lg-block" />
       </div>
     </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container px-2">
       <div class="desktop">
         <table class="table table-bordered table-sm">
           <thead>
@@ -43,8 +43,8 @@
             </tr>
             <tr>
               <td colspan="3" class="button-cell text-center">
-                <p class="mb-2">{{ $t('message.grid.go_to') }} </p>
-                <a class="btn btn-primary btn-sm"
+                <p class="mb-2 font-weight-bold">{{ $t('message.grid.go_to') }} </p>
+                <a class="btn btn-primary btn-sm "
                   :href="dynamicUrl"
                   role="button"
                   target="_blank">

@@ -41,6 +41,14 @@
     </main>
 </template>
 
+<script>
+export default {
+  metaInfo: {
+    title: 'Learn the basics of cryptocurrencies and why they present great return opportunities for Canadian investors',
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 section {
     background: $light;
