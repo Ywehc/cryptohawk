@@ -1,8 +1,10 @@
 <template>
     <div id="nav">
-      <div class="nav-upper">
-        <router-link to="/" class="brand-text">{{ $t('message.brand.name') }}</router-link>
-      <img src="/../assets/hawk.svg" class="logo">
+      <div class="row nav-upper">
+        <router-link to="/" class="col brand-text">
+          {{ $t('message.brand.name') }}
+        </router-link>
+        <img src="/../assets/hawk.svg" class="col logo">
       </div>
       <div class="nav-lower d-xl-none">
         <p class="description mt-3">{{ $t('message.brand.description') }}</p>
@@ -16,14 +18,8 @@
   margin: auto;
   color: $lightest;
 }
-.nav-upper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-align: center;
-}
 .logo {
-  width: 30px;
+  max-width: 4em!important;
   filter: invert(92%) sepia(18%) saturate(145%) hue-rotate(196deg) brightness(99%) contrast(93%);
 }
 .brand-text {
