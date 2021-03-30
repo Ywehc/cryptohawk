@@ -275,6 +275,9 @@ export default {
       return (`$12.61 ${this.$t('message.grid.to_each_party')}`);
     },
   },
+  metaInfo: {
+    title: 'Compare platforms to help find the right place to purchase Bitcoin, Ethereum or other cryptocurrencies',
+  },
 };
 </script>
 
