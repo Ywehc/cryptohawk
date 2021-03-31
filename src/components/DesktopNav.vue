@@ -16,20 +16,11 @@
 
 <style lang="scss" scoped>
 .wrapper {
-    justify-content: flex-end;
-}
-.brand-container {
-    flex-direction: column;
-    padding: 20px 0px;
-    display: flex;
-    text-align: right;
-    justify-content: flex-end;
-    width: 100%;
+    justify-content: center;
 }
 .nav-container {
-    text-align: right;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: -6px;
 }
 .link {
@@ -38,9 +29,23 @@
     font-family: $brand-font;
     font-weight: 200;
     letter-spacing: $brand-letter-spacing;
-    font-size: 24px;
+    font-size: 28px;
+    margin: 10px;
 }
 .router-link-active {
     color: $lightest;
+}
+@media only screen and (min-width: 992px) {
+    .nav-container {
+      flex-direction: column;
+      text-align: right;
+    }
+    .wrapper {
+        justify-content: flex-end;
+    }
+    .link {
+        font-size: 24px;
+        margin: 0;
+    }
 }
 </style>

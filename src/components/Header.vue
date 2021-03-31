@@ -4,7 +4,7 @@
           {{ $t('message.brand.name') }}
       </router-link>
       <div class="nav-lower d-xl-none">
-        <p class="description mt-3">{{ $t('message.brand.description') }}</p>
+        <p class="description mt-3 d-block d-sm-none">{{ $t('message.brand.description') }}</p>
       </div>
       <!-- <div class="row nav-upper">
         <router-link to="/" class="col brand-text">

@@ -43,7 +43,7 @@
             </tr>
             <tr>
               <td colspan="3" class="button-cell text-center">
-                <p class="mb-2 font-weight-bold">{{ $t('message.grid.go_to') }} </p>
+                <p class="mb-2">{{ $t('message.grid.go_to') }} </p>
                 <a class="btn btn-primary btn-sm "
                   :href="dynamicUrl"
                   role="button"
