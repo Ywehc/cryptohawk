@@ -1,7 +1,7 @@
 
 .desktop {
     .table {
-        min-height: 460px;
+        min-height: 430px;
     }
     tr {
         border-color: $medium;
@@ -9,7 +9,7 @@
     }
     td {
         padding: 10px;
-        font-size: 14px;
+        font-size: 12px;
     }
     tbody {
         font-family: $brand-font;
@@ -18,7 +18,6 @@
         background-color: $attention;
         border-color: $attention;
         color: $darkest;
-        font-weight: bold;
         margin-bottom: 8px;
     }
     .btn-primary:hover {

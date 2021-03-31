@@ -23,18 +23,23 @@ export default {
   display: flex;
   margin: 0px auto;
 }
-.desktop-grid {
-  padding-top: 40px;
-}
 h2 {
   color: $lightest;
   font-size: 26px;
   width: 90%;
-  margin: 80px auto;
+  margin: 40px auto;
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
 .nav {
   padding-right: 0;
+}
+@media only screen and (min-width: 992px) {
+  .desktop-grid {
+    padding-top: 40px;
+  }
+  h2 {
+    margin: 80px auto;
+  }
 }
 </style>

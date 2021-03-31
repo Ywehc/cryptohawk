@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Header class="header" />
-    <MobileGrid class="d-sm-block d-lg-none" />
-    <DesktopGrid class="d-none d-lg-block"/>
+    <MobileGrid class="d-block d-sm-none" />
+    <DesktopGrid class="d-none d-sm-block"/>
     <Footer class="footer"/>
   </div>
 </template>

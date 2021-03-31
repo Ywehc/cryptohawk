@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div class="mobile-container d-sm-flex d-lg-none">
+      <div class="mobile-container d-xs-flex d-sm-none">
         <b-card no-body class="mobile">
           <b-tabs vertical>
             <b-tab class="platform-tab" :title="this.$store.state.platforms.coinbase.title">
@@ -127,7 +127,7 @@
         </b-card>
       </div>
 
-      <div class="d-none d-lg-flex container-fluid px-0">
+      <div class="d-none d-sm-flex container-fluid px-0">
         <div class="container px-2">
           <div class="row">
             <desktop-card
