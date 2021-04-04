@@ -1,5 +1,9 @@
 <template>
     <main class="lg-px-4">
+        <PageHeader
+            :title="this.$t('message.hardware.title')"
+            :description="this.$t('message.hardware.description')"
+        />
         <section class="p-4">
             <div class="row">
                 <div class="col-12">
@@ -13,14 +17,14 @@
                 class="col-lg-6"
                 title="Trezor Model T"
                 url="https://shop.trezor.io/product/trezor-model-t?offer_id=15&aff_id=7069"
-                img_src="trezor_lifestyle.jpg"
+                img_src="trezor_lifestyle.png"
                 alt="trezor lifestyle"
                 :description="$t('message.hardware.trezor')"/>
             <hardware-card
                 class="col-lg-6"
                 title="Ledger Nano X"
                 url="https://shop.ledger.com/pages/ledger-nano-x?r=91c03745c56c"
-                img_src="nano_x.png"
+                img_src="nano_x.jpg"
                 alt="ledger nano x"
                 :description="$t('message.hardware.ledger')"/>
             </div>
@@ -30,9 +34,10 @@
 
 <script>
 import HardwareCard from '../components/HardwareCard.vue';
+import PageHeader from '../components/PageHeader.vue';
 
 export default {
-  components: { HardwareCard },
+  components: { HardwareCard, PageHeader },
   metaInfo: {
     title: 'Compare cold storage devices from brands like Ledger and Trezor to optimally protect your cryptocurrency hardware wallet',
   },

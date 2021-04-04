@@ -44,9 +44,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.table {
-  height: 450px;
-}
 tr {
     border-color: $medium;
     background-color: $lightest;
@@ -55,8 +52,7 @@ td {
     font-size: $main-text-size;
 }
 img {
-  max-height: 80px;
-  max-width: 80px;
+  max-width: 180px;
 }
 .btn-primary {
     background-color: $attention;
@@ -82,6 +78,11 @@ img {
     padding: 8px;
     font-size: 16px;
     border-color: $dark;
+}
+@media only screen and (min-width: 992px) {
+    .table {
+      height: 480px;
+    }
 }
 
 </style>

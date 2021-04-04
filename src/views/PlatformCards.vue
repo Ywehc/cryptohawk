@@ -1,5 +1,9 @@
 <template>
     <div>
+      <PageHeader
+        :title="this.$t('message.grid.title')"
+        :description="this.$t('message.grid.description')"
+      />
       <div class="mobile-container d-xs-flex d-sm-none">
         <b-card no-body class="mobile">
           <b-tabs vertical>
@@ -238,11 +242,13 @@
 <script>
 import DesktopCard from '../components/DesktopCard.vue';
 import MobileCard from '../components/MobileCard.vue';
+import PageHeader from '../components/PageHeader.vue';
 
 export default {
   components: {
     DesktopCard,
     MobileCard,
+    PageHeader,
   },
   data() {
     return {

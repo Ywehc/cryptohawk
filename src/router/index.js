@@ -10,6 +10,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
+    redirect: '/platforms',
     name: 'Home',
     component: Platforms,
   },
@@ -45,6 +46,11 @@ const routes = [
 
 const router = new VueRouter({
   routes,
+  // scrollBehavior used to make Contact route scroll to top
+  // eslint-disable-next-line no-unused-vars
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 };
+  },
 });
 
 export default router;
