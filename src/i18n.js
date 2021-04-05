@@ -91,7 +91,7 @@ const messages = {
         to_new_user: 'to new user',
         established: 'Established',
         operated_from: 'Operated From',
-        title: 'Platforms',
+        title: 'Platforms & Exchanges',
         description: 'Make better decisions about where you buy and sell cryptocurrency, and where to refer your friends!',
       },
       contact: {
@@ -107,7 +107,8 @@ const messages = {
       },
       prices: {
         title: "Prices",
-        description: "Up to the second coin prices, in $CAD.",
+        descriptionDesktop: "Up to the second prices in ",
+        descriptionMobile: "Up to the second prices in Canadian dollars.",
       },
       beginners: {
         title: "Beginners",
@@ -127,7 +128,7 @@ const messages = {
         conclusion3: " to compare important things like coin ownership, spreads, additional fees, referral bonuses and more.",
       },
       hardware: {
-        title: "Cold Storage",
+        title: "Hardware/Cold Storage",
         description: "The most crital way to protect cryptocurrency assets of any meaningful value.",
         intro1: "A popular phrase in world of cryptocurrency is 'Not your keys, not your coins'. In essence, not having sole control over your coins and the means to access them puts your investment at a higher level of risk.",
         intro2: "Most modern cryptocurrency exchanges, platforms and online wallets are reasonably secure but because all are connected to the web, there is always a chance the keys to your coins could be intercepted",

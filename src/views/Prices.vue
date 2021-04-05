@@ -7,11 +7,12 @@
         <PageHeader
           class="d-xs-flex d-sm-none"
           :title="this.$t('message.prices.title')"
-          :description="this.$t('message.prices.description')"
+          :description="this.$t('message.prices.descriptionMobile')"
         />
-        <h2 class="d-none d-sm-block text-center heading">{{ $t('message.prices.title') }}</h2>
+        <h2 class="d-none d-sm-block text-center mt-2 heading">{{ $t('message.prices.title') }}</h2>
         <p class="d-none d-sm-block text-center font-weight-bold description">
-          {{ $t('message.prices.description') }}
+          {{ $t('message.prices.descriptionDesktop') }}
+          <img src="../../public/assets/flag-canada.png" class="flag" alt="Canada flag">
         </p>
       <table class="table table-striped">
         <tbody>
@@ -220,6 +221,7 @@ export default {
     return {
       currencies: [],
       loading: false,
+      flag: '&#127462; ',
     };
   },
   mounted() {
@@ -262,6 +264,9 @@ export default {
   font-weight: bold;
   font-size: 20px;
   text-align: center;
+}
+.flag {
+  width: 20px;
 }
 @media only screen and (min-width: 992px) {
   .sidebar {
