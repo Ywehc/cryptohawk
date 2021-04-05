@@ -4,7 +4,16 @@
         <p>{{ $t('message.ui.loading_prices') }}</p>
       </div>
       <div v-else class="api-loaded">
-        <p class="text-center p-3 heading">{{ $t('message.prices') }} $CAD</p>
+        <PageHeader
+          class="d-xs-flex d-sm-none"
+          :title="this.$t('message.prices.title')"
+          :description="this.$t('message.prices.descriptionMobile')"
+        />
+        <h2 class="d-none d-sm-block text-center mt-2 heading">{{ $t('message.prices.title') }}</h2>
+        <p class="d-none d-sm-block text-center font-weight-bold description">
+          {{ $t('message.prices.descriptionDesktop') }}
+          <img src="../../public/assets/flag-canada.png" class="flag" alt="Canada flag">
+        </p>
       <table class="table table-striped">
         <tbody>
           <PricesRow
@@ -204,13 +213,15 @@
 <script>
 import axios from 'axios';
 import PricesRow from '../components/PricesRow.vue';
+import PageHeader from '../components/PageHeader.vue';
 
 export default {
-  components: { PricesRow },
+  components: { PricesRow, PageHeader },
   data() {
     return {
       currencies: [],
       loading: false,
+      flag: '&#127462; ',
     };
   },
   mounted() {
@@ -234,6 +245,7 @@ export default {
 .heading {
   font-weight: bold;
   color: $darkest;
+  font-size: 18px;
 }
 .table {
   font-size: $small-text-size;
@@ -253,12 +265,23 @@ export default {
   font-size: 20px;
   text-align: center;
 }
+.flag {
+  width: 20px;
+}
 @media only screen and (min-width: 992px) {
   .sidebar {
     max-width: 270px;
   }
   .api-loading p {
     margin-top: 14em;
+  }
+  .api-loaded {
+    border: 2px solid $light;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .description {
+    font-size: 12px;
   }
 }
 </style>

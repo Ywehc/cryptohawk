@@ -1,6 +1,6 @@
 <template>
     <div class="desktop-grid">
-      <h2>{{ $t('message.brand.description') }}</h2>
+      <h1>{{ $t('message.brand.description') }}</h1>
       <div class="row container px-0">
         <DesktopNav class="col-lg-2 nav"/>
         <router-view class="col-lg-7 main" />
@@ -23,7 +23,7 @@ export default {
   display: flex;
   margin: 0px auto;
 }
-h2 {
+h1 {
   color: $lightest;
   font-size: 26px;
   width: 90%;
@@ -38,7 +38,7 @@ h2 {
   .desktop-grid {
     padding-top: 40px;
   }
-  h2 {
+  h1 {
     margin: 80px auto;
   }
 }

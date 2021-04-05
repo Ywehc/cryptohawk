@@ -1,5 +1,9 @@
 <template>
     <main class="lg-px-4">
+        <PageHeader
+            :title="this.$t('message.beginners.title')"
+            :description="this.$t('message.beginners.description')"
+        />
         <section class="p-4">
             <h2>{{ $t('message.beginners.heading1') }}</h2>
             <article>
@@ -42,7 +46,10 @@
 </template>
 
 <script>
+import PageHeader from '../components/PageHeader.vue';
+
 export default {
+  components: { PageHeader },
   metaInfo: {
     title: 'Learn the basics of cryptocurrencies and why they present great return opportunities for Canadian investors',
   },

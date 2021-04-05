@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Header from './components/Header.vue';
+import Header from './components/AppHeader.vue';
 import Footer from './components/Footer.vue';
 import MobileGrid from './components/MobileGrid.vue';
 import DesktopGrid from './components/DesktopGrid.vue';

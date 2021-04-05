@@ -91,8 +91,11 @@ const messages = {
         to_new_user: 'to new user',
         established: 'Established',
         operated_from: 'Operated From',
+        title: 'Platforms & Exchanges',
+        description: 'Make better decisions about where you buy and sell cryptocurrency, and where to refer your friends!',
       },
       contact: {
+        title: 'Contact',
         header: 'How can we help you today?',
         email: 'Your email:',
         message: 'Your message:',
@@ -102,8 +105,14 @@ const messages = {
       ui: {
         loading_prices: 'Updating prices...',
       },
-      prices: "Current prices in ",
+      prices: {
+        title: "Prices",
+        descriptionDesktop: "Up to the second prices in ",
+        descriptionMobile: "Up to the second prices in Canadian dollars.",
+      },
       beginners: {
+        title: "Beginners",
+        description: "New to cryptocurrency investing? Start here!",
         heading1: "What is cryptocurrency?",
         intro1: "Wikipedia describes cryptocurrency as a digital asset designed to work as a medium of exchange wherein individual coin ownership records are stored in a ledger existing in a form of computerized database using strong cryptography to secure transaction records, to control the creation of additional coins, and to verify the transfer of coin ownership.",
         heading2: "Why are so many Canadian investors obtaining exposure to cryptocurrency?",
@@ -119,6 +128,8 @@ const messages = {
         conclusion3: " to compare important things like coin ownership, spreads, additional fees, referral bonuses and more.",
       },
       hardware: {
+        title: "Hardware/Cold Storage",
+        description: "The most crital way to protect cryptocurrency assets of any meaningful value.",
         intro1: "A popular phrase in world of cryptocurrency is 'Not your keys, not your coins'. In essence, not having sole control over your coins and the means to access them puts your investment at a higher level of risk.",
         intro2: "Most modern cryptocurrency exchanges, platforms and online wallets are reasonably secure but because all are connected to the web, there is always a chance the keys to your coins could be intercepted",
         intro3: "Hardware wallets, or 'cold storage' allow you to conduct transactions without your keys ever leaving your hardware wallet/device, making them the most secure way to store coins, especially long term.",
@@ -216,6 +227,7 @@ const messages = {
         operated_from: 'Company Operated From',
       },
       contact: {
+        title: 'Contact',
         header: `Que peut-on faire pour vous aider aujourd'hui?`,
         email: 'Votre email:',
         message: 'Votre message:',
@@ -225,8 +237,13 @@ const messages = {
       ui: {
         loading_prices: 'chargement des prix...',
       },
-      prices: "prix courants en ",
+      prices: {
+        title: "FR_Prices",
+        description: "FR_Up to the second coin prices, in $CAD.",
+      },
       beginners: {
+        title: "FR_Beginners",
+        description: "FR_New to cryptocurrency investing? Start here!",
         heading1: "Qu'est-ce que la crypto-monnaie?",
         intro1: "Wikipedia décrit la crypto-monnaie comme un actif numérique conçu pour fonctionner comme un moyen d'échange dans lequel les enregistrements de propriété de pièces individuelles sont stockés dans un registre existant sous forme de base de données informatisée utilisant une cryptographie forte pour sécuriser les enregistrements de transaction, contrôler la création de pièces supplémentaires et à vérifier le transfert de propriété des pièces.",
         heading2: "Pourquoi tant d'investisseurs canadiens obtiennent-ils une exposition à la crypto-monnaie?",
@@ -242,6 +259,8 @@ const messages = {
         conclusion3: " pour comparer des choses importantes comme la possession de pièces, les spreads, les frais supplémentaires, les bonus de parrainage et plus",
       },
       hardware: {
+        title: "FR_Cold Storage",
+        description: "FR_The most crital way to protect cryptocurrency assets of any meaningful value",
         intro1: "Une phrase populaire dans le monde de la crypto-monnaie est `` Pas vos clés, pas vos pièces ''. En substance, ne pas avoir le contrôle exclusif de vos pièces et des moyens d'y accéder met votre investissement à un niveau de risque plus élevé.",
         intro2: "La plupart des échanges de crypto-monnaie, des plates-formes et des portefeuilles en ligne modernes sont raisonnablement sécurisés, mais comme tous sont connectés au Web, il y a toujours une chance que les clés de vos pièces soient interceptées.",
         intro3: "Les portefeuilles matériels, ou `` stockage à froid '', vous permettent d'effectuer des transactions sans que vos clés ne quittent jamais votre portefeuille / appareil matériel, ce qui en fait le moyen le plus sûr de stocker des pièces, en particulier à long terme.",
