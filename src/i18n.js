@@ -129,7 +129,7 @@ const messages = {
       },
       hardware: {
         title: "Hardware/Cold Storage",
-        description: "The most crital way to protect cryptocurrency assets of any meaningful value.",
+        description: "The most critical way to protect cryptocurrency assets of any meaningful value.",
         intro1: "A popular phrase in world of cryptocurrency is 'Not your keys, not your coins'. In essence, not having sole control over your coins and the means to access them puts your investment at a higher level of risk.",
         intro2: "Most modern cryptocurrency exchanges, platforms and online wallets are reasonably secure but because all are connected to the web, there is always a chance the keys to your coins could be intercepted",
         intro3: "Hardware wallets, or 'cold storage' allow you to conduct transactions without your keys ever leaving your hardware wallet/device, making them the most secure way to store coins, especially long term.",
@@ -260,7 +260,7 @@ const messages = {
       },
       hardware: {
         title: "FR_Cold Storage",
-        description: "FR_The most crital way to protect cryptocurrency assets of any meaningful value",
+        description: "FR_The most critical way to protect cryptocurrency assets of any meaningful value",
         intro1: "Une phrase populaire dans le monde de la crypto-monnaie est `` Pas vos clés, pas vos pièces ''. En substance, ne pas avoir le contrôle exclusif de vos pièces et des moyens d'y accéder met votre investissement à un niveau de risque plus élevé.",
         intro2: "La plupart des échanges de crypto-monnaie, des plates-formes et des portefeuilles en ligne modernes sont raisonnablement sécurisés, mais comme tous sont connectés au Web, il y a toujours une chance que les clés de vos pièces soient interceptées.",
         intro3: "Les portefeuilles matériels, ou `` stockage à froid '', vous permettent d'effectuer des transactions sans que vos clés ne quittent jamais votre portefeuille / appareil matériel, ce qui en fait le moyen le plus sûr de stocker des pièces, en particulier à long terme.",
