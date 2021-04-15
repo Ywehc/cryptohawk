@@ -9,11 +9,16 @@
           :title="this.$t('message.prices.title')"
           :description="this.$t('message.prices.descriptionMobile')"
         />
-        <h2 class="d-none d-sm-block text-center mt-2 heading">{{ $t('message.prices.title') }}</h2>
+        <h2 class="d-none d-sm-block d-md-none text-center mt-2 heading">
+          {{ $t('message.prices.title') }}
+        </h2>
         <p class="d-none d-sm-block text-center font-weight-bold description">
           {{ $t('message.prices.descriptionDesktop') }}
           <img src="../../public/assets/flag-canada.png" class="flag" alt="Canada flag">
         </p>
+        <div class="refresh text-center">
+          <button class="btn btn-primary btn-sm mb-3" @click="refreshApi()">Refresh</button>
+        </div>
       <table class="table table-striped">
         <tbody>
           <PricesRow
@@ -224,64 +229,24 @@ export default {
       flag: '&#127462; ',
     };
   },
+  methods: {
+    refreshApi() {
+      this.loading = true;
+      axios
+        .get(`https://api.nomics.com/v1/currencies/ticker?key=${process.env.VUE_APP_NOMICS}&ids=BTC,ETH,XRP,ADA,USDT,BNB,DOT,LTC,LINK,USDC,XLM,BCH,UNI,DOGE,THETA,HEX,FIL,WBTC,LUNA,ALGO,VET,CRO,TRX,FTT,ATOM,AAVE,SOL,KSM&interval=1d,30d&convert=CAD&per-page=100&page=1`)
+        // eslint-disable-next-line no-return-assign
+        .then((response) => this.currencies = response)
+        .catch((error) => { console.log(error.response); })
+        // eslint-disable-next-line no-return-assign
+        .finally(() => (this.loading = false));
+    },
+  },
   mounted() {
-    this.loading = true;
-    axios
-      .get(`https://api.nomics.com/v1/currencies/ticker?key=${process.env.VUE_APP_NOMICS}&ids=BTC,ETH,XRP,ADA,USDT,BNB,DOT,LTC,LINK,USDC,XLM,BCH,UNI,DOGE,THETA,HEX,FIL,WBTC,LUNA,ALGO,VET,CRO,TRX,FTT,ATOM,AAVE,SOL,KSM&interval=1d,30d&convert=CAD&per-page=100&page=1`)
-      // eslint-disable-next-line no-return-assign
-      .then((response) => this.currencies = response)
-      .catch((error) => { console.log(error.response); })
-      // eslint-disable-next-line no-return-assign
-      .finally(() => (this.loading = false));
+    this.refreshApi();
   },
 };
 </script>
 
 <style scoped lang="scss">
-.sidebar {
-  background-color: $light;
-  padding: 0;
-}
-.heading {
-  font-weight: bold;
-  color: $darkest;
-  font-size: 18px;
-}
-.table {
-  font-size: $small-text-size;
-  font-weight: bold;
-}
-.nomics {
-  font-size: 12px;
-  font-weight: bold;
-  a {
-    text-decoration: none;
-    color: $dark;
-  }
-}
-.api-loading p {
-  margin-top: 6em;
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
-}
-.flag {
-  width: 20px;
-}
-@media only screen and (min-width: 992px) {
-  .sidebar {
-    max-width: 270px;
-  }
-  .api-loading p {
-    margin-top: 14em;
-  }
-  .api-loaded {
-    border: 2px solid $light;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-  .description {
-    font-size: 12px;
-  }
-}
+@import '../../public/scss/_prices.scss';
 </style>

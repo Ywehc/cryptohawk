@@ -1,0 +1,81 @@
+.sidebar {
+  background-color: $light;
+  padding: 0;
+}
+.heading {
+  font-weight: bold;
+  color: $darkest;
+  font-size: 18px;
+}
+.table {
+  font-size: $small-text-size;
+  font-weight: bold;
+  border-right: 50px solid $darkest;
+  border-left: 50px solid $darkest;
+}
+.nomics {
+  font-size: 12px;
+  font-weight: bold;
+  a {
+    text-decoration: none;
+    color: $dark;
+  }
+}
+.api-loading p {
+  margin-top: 6em;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.flag {
+  width: 20px;
+  margin-top: -2px;
+}
+.refresh {
+  background: $darkest;
+  .btn {
+    color: $darkest;
+    background-color: $lightest;
+    border: 1px solid $light;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .btn:hover {
+    color: $darkest;
+    border: 1px solid $darkest;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .table {
+    border-right: none;
+    border-left: none;
+  }
+  .sidebar {
+    max-width: 270px;
+  }
+  .api-loaded {
+    padding-top: 20px;
+  }
+  .sidebar, .api-loaded {
+    border-radius: 30px;
+  }
+  .api-loading p {
+    margin-top: 14em;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .refresh {
+    background: $light;
+    .btn {
+      color: $lightest;
+      background-color: $darkest;
+      border: 1px solid $darkest;
+      
+    }
+    .btn:hover {
+      color: $darkest;
+      background-color: $lightest;
+    }
+  }
+}
