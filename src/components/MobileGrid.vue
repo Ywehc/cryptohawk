@@ -34,7 +34,7 @@
     display: flex;
     justify-content: center;
     font-family: 'Prompt', sans-serif;
-    padding: 5px;
+    padding: 5px 15px;
     background: $lightest;
     .link {
       list-style-type: none;
@@ -44,6 +44,7 @@
       color: $medium;
       text-decoration: none;
       font-size: 16px;
+      margin: auto 6px;
     }
     .router-link-active {
       color: $darkest;
