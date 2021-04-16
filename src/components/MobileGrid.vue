@@ -6,7 +6,7 @@
           Platforms
           <div class="underline"></div>
         </router-link>
-        <router-link class="link" to="/prices">
+        <router-link class="link" to="/prices-mobile">
           Prices
           <div class="underline"></div>
         </router-link>
