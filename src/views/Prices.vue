@@ -9,6 +9,9 @@
           :title="this.$t('message.prices.title')"
           :description="this.$t('message.prices.descriptionMobile')"
         />
+        <div class="nomics">
+          <a href="https://nomics.com">{{ $t('message.nomics') }}</a>
+        </div>
         <h2 class="d-none d-sm-block d-md-none text-center mt-2 heading">
           {{ $t('message.prices.title') }}
         </h2>
@@ -16,6 +19,9 @@
           {{ $t('message.prices.descriptionDesktop') }}
           <img src="../../public/assets/flag-canada.png" class="flag" alt="Canada flag">
         </p>
+        <!-- <p class="nomics font-weight-bold">
+          <a href="https://nomics.com">{{ $t('message.nomics') }}</a>
+        </p> -->
         <div class="refresh text-center">
           <button class="btn btn-primary btn-sm mb-3" @click="refreshApi()">Refresh</button>
         </div>
@@ -208,9 +214,6 @@
           />
         </tbody>
       </table>
-      <p class="nomics text-center mx-3">
-        <a href="https://nomics.com">{{ $t('message.nomics') }}</a>
-      </p>
       </div>
     </div>
 </template>
