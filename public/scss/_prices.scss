@@ -14,12 +14,16 @@
   border-left: 50px solid $darkest;
 }
 .nomics {
-  font-size: 12px;
-  font-weight: bold;
+  background-color: $darkest;
+  padding: 15px;
   a {
     text-decoration: none;
-    color: $dark;
+    color: $lightest;
+    font-size: 14px;
   }
+}
+.api-loading {
+  background-color: $darkest;
 }
 .api-loading p {
   margin-top: 6em;
@@ -52,6 +56,16 @@
   }
   .sidebar {
     max-width: 270px;
+  }
+  .nomics {
+    text-align: center;
+    background-color: $light;
+    a {
+      text-decoration: none;
+      color: $darkest;
+    }
+    font-size: 14px;
+    font-weight: bold;
   }
   .api-loaded {
     padding-top: 20px;
