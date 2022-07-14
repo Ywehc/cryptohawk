@@ -17,8 +17,8 @@
   background-color: $darkest;
   padding: 15px;
   a {
-    text-decoration: none;
     color: $lightest;
+    text-decoration: underline;
     font-size: 14px;
   }
 }
@@ -61,7 +61,6 @@
     text-align: center;
     background-color: $light;
     a {
-      text-decoration: none;
       color: $darkest;
     }
     font-size: 14px;
