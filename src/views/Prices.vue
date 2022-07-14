@@ -19,9 +19,6 @@
           {{ $t('message.prices.descriptionDesktop') }}
           <img src="../../public/assets/flag-canada.png" class="flag" alt="Canada flag">
         </p>
-        <!-- <p class="nomics font-weight-bold">
-          <a href="https://nomics.com">{{ $t('message.nomics') }}</a>
-        </p> -->
         <div class="refresh text-center">
           <button class="btn btn-primary btn-sm mb-3" @click="refreshApi()">Refresh</button>
         </div>
